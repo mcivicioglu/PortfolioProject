@@ -1,0 +1,17 @@
+﻿namespace PortfolioProject.Entities
+{
+    public class Experience
+    {
+        public int ExperienceID { get; set; }
+
+        public string Title { get; set; }
+
+        public string CompanyName { get; set; }
+
+        public string Description { get; set; }
+
+        public string Category { get; set; }
+
+        public bool IsActive { get; set; }
+    }
+}
