@@ -1,3 +1,5 @@
+using PortfolioProject.Context;
+
 namespace PortfolioProject
 {
     public class Program
@@ -9,6 +11,8 @@ namespace PortfolioProject
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddDbContext<PortfolioContext>();
+           
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
