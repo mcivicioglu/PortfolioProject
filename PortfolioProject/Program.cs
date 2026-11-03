@@ -12,7 +12,7 @@ namespace PortfolioProject
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddDbContext<PortfolioContext>();
-           
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -29,16 +29,16 @@ namespace PortfolioProject
             app.UseAuthorization();
 
             app.MapStaticAssets();
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}")
-                .WithStaticAssets();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "areas",
                     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
             });
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}")
+                .WithStaticAssets();
 
             app.Run();
         }

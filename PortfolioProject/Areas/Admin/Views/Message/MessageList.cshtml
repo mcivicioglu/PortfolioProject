@@ -12,6 +12,8 @@
             <th>Konu</th>
             <th>Tarih</th>
             <th>Mesajı Aç</th>
+            <th>Mesajı Düzenle</th>
+            <th>Mesajı Sil</th>
         </tr>
     </thead>
     <tbody>
@@ -24,6 +26,12 @@
                 <td>@message.SentDate.ToString("g")</td>
                 <td>
                     <a href="/Admin/Message/MessageDetail/@message.MessageID" class="btn btn-info">Mesajı Aç</a>
+                </td>
+                <td>
+                    <a href="/Admin/Message/UpdateMessage/@message.MessageID" class="btn btn-success">Mesajı Düzenle</a>
+                </td>
+                <td>
+                    <a href="/Admin/Message/DeleteMessage/@message.MessageID" class="btn btn-danger">Mesajı Sil</a>
                 </td>
             </tr>
         }
