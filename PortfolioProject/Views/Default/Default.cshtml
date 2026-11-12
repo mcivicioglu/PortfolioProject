@@ -1,0 +1,1160 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>MC — Software Engineer &amp; Architect</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script>
+            (function () {
+                try {
+                    const storedTheme = localStorage.getItem('portfolio-theme');
+                    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                    if (storedTheme === 'dark' || (!storedTheme && systemDark)) {
+                        document.documentElement.classList.add('dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                    }
+                } catch (e) { }
+            })();
+    </script>
+    <style>
+            @@layer base {
+                html, body {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                main > :first-child {
+                    margin-top: 0 !important;
+                }
+
+                main > :last-child {
+                    margin-bottom: 0 !important;
+                }
+            }
+
+            ::-webkit-scrollbar {
+                display: none;
+            }
+
+            html.theme-transitioning, html.theme-transitioning * {
+                transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
+            }
+
+            :root {
+                --color-surface: #faf9f6;
+                --color-surface-container: #efeeeb;
+                --color-surface-container-low: #f4f3f0;
+                --color-surface-container-high: #e9e8e5;
+                --color-surface-container-highest: #e3e2df;
+                --color-surface-container-lowest: #ffffff;
+                --color-primary: #111618;
+                --color-primary-container: #252a2d;
+                --color-on-surface: #1a1c1a;
+                --color-on-surface-variant: #44474a;
+                --color-secondary: #5f5b77;
+                --color-secondary-container: #e2dbfd;
+                --color-tertiary-fixed: #d9e7d0;
+                --color-tertiary-fixed-dim: #bdcbb5;
+                --color-outline: #74777a;
+                --color-outline-variant: #c4c7c9;
+            }
+
+            html.dark {
+                --color-surface: #121314;
+                --color-surface-container: #1c1d1f;
+                --color-surface-container-low: #17181a;
+                --color-surface-container-high: #242528;
+                --color-surface-container-highest: #2d2e32;
+                --color-surface-container-lowest: #141517;
+                --color-primary: #f4f3f0;
+                --color-primary-container: #2a2b2f;
+                --color-on-surface: #f1f0ec;
+                --color-on-surface-variant: #a1a1aa;
+                --color-secondary: #a8a0d4;
+                --color-secondary-container: #2e2a44;
+                --color-tertiary-fixed: #243522;
+                --color-tertiary-fixed-dim: #5c7553;
+                --color-outline: #8e9094;
+                --color-outline-variant: #34363a;
+            }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "var(--color-primary)",
+                            "primary-container": "var(--color-primary-container)",
+                            surface: "var(--color-surface)",
+                            "surface-container": "var(--color-surface-container)",
+                            "surface-container-low": "var(--color-surface-container-low)",
+                            "surface-container-high": "var(--color-surface-container-high)",
+                            "surface-container-highest": "var(--color-surface-container-highest)",
+                            "surface-container-lowest": "var(--color-surface-container-lowest)",
+                            "on-surface": "var(--color-on-surface)",
+                            "on-surface-variant": "var(--color-on-surface-variant)",
+                            secondary: "var(--color-secondary)",
+                            "secondary-container": "var(--color-secondary-container)",
+                            "tertiary-fixed": "var(--color-tertiary-fixed)",
+                            "tertiary-fixed-dim": "var(--color-tertiary-fixed-dim)",
+                            outline: "var(--color-outline)",
+                            "outline-variant": "var(--color-outline-variant)",
+                        },
+                        fontFamily: {
+                            manrope: ["Manrope", "sans-serif"],
+                            dmsans: ["DM Sans", "sans-serif"],
+                            mono: ["JetBrains Mono", "monospace"]
+                        }
+                    }
+                }
+            };
+    </script>
+</head>
+<body class="bg-surface font-dmsans text-on-surface antialiased selection:bg-secondary-container selection:text-secondary relative">
+
+    <!-- TOP NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl border-b border-surface-container-highest/70">
+        <div class="h-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <a class="flex items-center gap-1 group" href="#ana-sayfa">
+                <span class="font-manrope text-xl text-primary font-bold tracking-tight">MC</span>
+                <span class="h-1.5 w-1.5 rounded-full bg-secondary inline-block mb-1 group-hover:bg-primary transition-colors"></span>
+            </a>
+            <nav class="hidden lg:flex items-center gap-6 text-xs uppercase font-mono tracking-wider">
+                <a class="text-primary font-semibold hover:text-secondary transition-colors" href="#ana-sayfa">Ana Sayfa</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#hakkimda">Hakkımda</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#yeteneklerim">Yeteneklerim</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#projelerim">Projelerim</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#deneyim">Deneyim</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#egitim">Eğitim</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors" href="#iletisim">İletişim</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <button aria-label="Temayı Değiştir" class="h-9 w-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-primary flex items-center justify-center border border-surface-container-highest/70 transition-all cursor-pointer" id="theme-toggle" type="button">
+                    <span class="material-symbols-outlined text-[19px]" id="theme-toggle-icon">dark_mode</span>
+                </button>
+                <a class="inline-flex items-center gap-1.5 bg-primary text-surface hover:opacity-90 px-4 py-2 rounded-lg font-mono text-xs uppercase tracking-wider transition-all" href="#cv">
+                    <span>CV İndir</span>
+                    <span class="material-symbols-outlined text-[15px]">south</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- STICKY FLOATING SECTION NAVIGATOR (Right Sidebar) -->
+    <aside aria-label="Bölüm Gezinme" class="fixed right-3 sm:right-6 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col items-center gap-2 bg-surface/90 backdrop-blur-md p-1.5 rounded-full border border-surface-container-highest shadow-xl">
+        <button aria-label="Önceki Bölüme Çık" class="global-prev-section h-8 w-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all cursor-pointer" title="Önceki Bölüm" type="button">
+            <span class="material-symbols-outlined text-[18px]">keyboard_arrow_up</span>
+        </button>
+        <div class="w-4 h-[1px] bg-surface-container-highest"></div>
+        <div class="flex flex-col gap-1.5 py-1" id="section-dots-nav">
+            <a aria-label="Ana Sayfa" class="w-2 h-2 rounded-full bg-primary transition-all duration-300" data-nav-target="ana-sayfa" href="#ana-sayfa" title="Ana Sayfa"></a>
+            <a aria-label="Hakkımda" class="w-2 h-2 rounded-full bg-outline-variant hover:bg-secondary transition-all duration-300" data-nav-target="hakkimda" href="#hakkimda" title="Hakkımda"></a>
+            <a aria-label="Yeteneklerim" class="w-2 h-2 rounded-full bg-outline-variant hover:bg-secondary transition-all duration-300" data-nav-target="yeteneklerim" href="#yeteneklerim" title="Yeteneklerim"></a>
+            <a aria-label="Projelerim" class="w-2 h-2 rounded-full bg-outline-variant hover:bg-secondary transition-all duration-300" data-nav-target="projelerim" href="#projelerim" title="Projelerim"></a>
+            <a aria-label="Deneyim" class="w-2 h-2 rounded-full bg-outline-variant hover:bg-secondary transition-all duration-300" data-nav-target="deneyim" href="#deneyim" title="Deneyim"></a>
+            <a aria-label="Eğitim" class="w-2 h-2 rounded-full bg-outline-variant hover:bg-secondary transition-all duration-300" data-nav-target="egitim" href="#egitim" title="Eğitim"></a>
+            <a aria-label="Nasıl Çalışıyorum?" class="w-2 h-2 rounded-full bg-outline-variant hover:bg-secondary transition-all duration-300" data-nav-target="felsefe" href="#felsefe" title="Nasıl Çalışıyorum?"></a>
+            <a aria-label="İletişim" class="w-2 h-2 rounded-full bg-outline-variant hover:bg-secondary transition-all duration-300" data-nav-target="iletisim" href="#iletisim" title="İletişim"></a>
+        </div>
+        <div class="w-4 h-[1px] bg-surface-container-highest"></div>
+        <button aria-label="Sonraki Bölüme İn" class="global-next-section h-8 w-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all cursor-pointer" title="Sonraki Bölüm" type="button">
+            <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+        </button>
+    </aside>
+
+    <main class="w-full pt-16">
+
+        <!-- 1. HERO SECTION -->
+        <section class="page-section relative w-full bg-surface py-20 lg:py-28" id="ana-sayfa">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 flex flex-col items-start">
+                        <div class="inline-flex items-center gap-2 bg-surface-container-high/70 px-3 py-1 rounded-full mb-6">
+                            <span class="inline-block w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+                            <span class="font-mono text-xs text-on-surface-variant font-medium">&lt; Merhaba, dünyama hoş geldin /&gt;</span>
+                        </div>
+                        <h1 class="font-manrope text-5xl sm:text-6xl text-primary font-bold tracking-tight">
+                            Merhaba, Ben <span class="text-secondary underline decoration-secondary-container decoration-4 underline-offset-8">Mahmut</span>.
+                        </h1>
+                        <div class="h-12 mt-3 mb-4 flex items-center">
+                            <span class="font-manrope text-2xl sm:text-3xl text-primary font-bold" id="typewriter-text">.NET Develo</span>
+                            <span class="inline-block w-1 h-7 bg-primary ml-1 animate-pulse" id="typewriter-cursor"></span>
+                        </div>
+                        <p class="text-base sm:text-lg text-on-surface-variant max-w-xl mb-8 leading-relaxed">
+                            Modern web teknolojileriyle performanslı, sürdürülebilir ve kullanıcı odaklı dijital deneyimler geliştiriyorum. Mimariden arayüze uçtan uca mühendislik hassasiyeti.
+                        </p>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <a class="inline-flex items-center gap-2 bg-primary text-surface hover:opacity-90 px-6 py-3 rounded-lg text-sm font-medium transition-all shadow-sm" href="#projelerim">
+                                <span>Projelerimi Keşfet</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </a>
+                            <a class="inline-flex items-center gap-2 bg-surface-container hover:bg-surface-container-high text-on-surface px-6 py-3 rounded-lg text-sm font-medium transition-all border border-surface-container-highest" href="#iletisim">
+                                <span>Benimle İletişime Geç</span>
+                                <span class="material-symbols-outlined text-[18px]">north_east</span>
+                            </a>
+                        </div>
+                        <div class="mt-12 flex flex-wrap items-center gap-8 font-mono text-xs text-on-surface-variant">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim animate-ping"></span>
+                                <span class="font-medium text-on-surface">✺ Çalışmaya ve yeni projelere hazır</span>
+                            </div>
+                            <div class="text-outline">LOC: 38.4225° N, 27.1311° E • IZM</div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative bg-surface-container-low rounded-2xl p-4 shadow-md border border-surface-container-highest">
+                            <div class="relative w-full h-[380px] rounded-xl overflow-hidden bg-surface-container">
+                                <img alt="Mahmut - Full Stack Developer at dark moody desk setup" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrBgLoDWCT5Pn6bHGKB5zpkI9kXo7IOKNGgdIXmboaoDFyk4M9FCqeEGgAVLe28XWSchk3O4ScRUwJuKQ8fTOPR8mPXIm_98oBagPWk2v98O34GIj755URb7h87TiFRjO_trNrzHV0KWaLTIgj5CpWfoKyV6H_inPa8_xyyhtPMOY5aBZ7Nd0SswxLVHFX8s8zPf4jzUw1lNIrlYyBBKTswley11SY_xLO8JxopsA_G7Bd-kjBevArdOJGcw">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-4 left-4 right-4 flex flex-wrap gap-1.5 font-mono text-xs">
+                                    <span class="bg-surface/90 backdrop-blur-md px-2 py-0.5 rounded text-on-surface">C#</span>
+                                    <span class="bg-surface/90 backdrop-blur-md px-2 py-0.5 rounded text-on-surface">ASP.NET Core</span>
+                                    <span class="bg-surface/90 backdrop-blur-md px-2 py-0.5 rounded text-on-surface">SQL Server</span>
+                                    <span class="bg-surface/90 backdrop-blur-md px-2 py-0.5 rounded text-on-surface">REST API</span>
+                                </div>
+                            </div>
+                            <!-- Code Badge Card -->
+                            <div class="-mt-8 -ml-4 relative bg-primary-container text-surface p-4 rounded-xl shadow-xl max-w-sm border border-outline-variant/30 font-mono text-xs">
+                                <div class="flex items-center justify-between pb-2 mb-2 border-b border-outline-variant/20"><div class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block"></span><span class="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span><span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span></div><span class="text-[11px] text-outline-variant">DeveloperProfile.cs</span><span class="text-tertiary-fixed text-[10px]">Open</span></div><pre class="text-[11px] leading-relaxed mb-3"><code><span class="text-secondary">public class</span> <span class="text-tertiary-fixed">DeveloperProfile</span> {
+                                <span class="text-secondary">public string</span> Name =&gt; <span class="text-tertiary-fixed">Mahmut</span>;
+                                <span class="text-secondary">public string</span> Role =&gt; <span class="text-tertiary-fixed">"Junior .NET Engineer"</span>;
+                                <span class="text-secondary">public string</span> Focus =&gt; <span class="text-tertiary-fixed">"Web &amp; Cloud Arch."</span>;
+                                <span class="text-secondary">public bool</span> OpenToWork =&gt; <span class="text-tertiary-fixed">true</span>;
+                                }</code></pre><div class="flex items-center justify-between pt-2 border-t border-outline-variant/20 font-mono text-[10px]"><div class="flex items-center gap-1.5 text-outline-variant"><span>.NET 10.0</span><span>•</span><span>C# 14</span></div><div class="flex items-center gap-1 text-tertiary-fixed"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed animate-pulse"></span><span>Aktif Projelere Açık</span></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section Bottom Scroll Down Button -->
+                <div class="flex justify-center mt-16">
+                    <button class="section-nav-down group inline-flex flex-col items-center gap-1 font-mono text-xs text-on-surface-variant hover:text-primary transition-colors cursor-pointer" data-target="hakkimda" type="button">
+                        <span>Aşağı Kaydır</span>
+                        <span class="material-symbols-outlined text-[18px] group-hover:translate-y-1 transition-transform">south</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ABOUT ME -->
+        <section class="page-section w-full py-24 bg-surface-container-low scroll-mt-16" id="hakkimda">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-baseline justify-between pb-4 mb-12 border-b border-surface-container-highest">
+                    <div class="flex items-baseline gap-2">
+                        <span class="font-mono text-xs text-secondary font-bold tracking-widest">01 /</span>
+                        <span class="font-mono text-xs text-outline tracking-wider uppercase">BEN KİMİM?</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-1">
+                            <button aria-label="Yukarı Kaydır" class="section-nav-up h-8 w-8 rounded-lg bg-surface hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="ana-sayfa" title="Yukarı Kaydır (Ana Sayfa)" type="button">
+                                <span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+                            </button>
+                            <button aria-label="Aşağı Kaydır" class="section-nav-down h-8 w-8 rounded-lg bg-surface hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="yeteneklerim" title="Aşağı Kaydır (Yeteneklerim)" type="button">
+                                <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+                            </button>
+                        </div>
+                        <h2 class="font-manrope text-3xl text-primary font-bold">Hakkımda</h2>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-5 relative">
+                        <div class="bg-surface rounded-2xl p-4 shadow-sm border border-surface-container-highest">
+                            <div class="relative w-full h-[400px] rounded-xl overflow-hidden bg-surface-container">
+                                <img alt="Mahmut Portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1U6an9HW2kD_47V9MC8fK0DaTtlk6GmuSbNdPpZKmHqkZQvijcarNg8-EpjGuiOY7zbNQn987pylpY6sXM4H-1haSNR8yQ-VBdcEZ1xB4QQ4q6WrSvaTZvkBLz1RZaxYai2XZBpoKj0lNPn6cwmrCGw9y-yxjkhwb50aAMmujEPC0mel_RNGmFiO9Hosp2iPMutVkbzxmZog9atorqDrb60A3hB4dESom9ZdpPPH-oMT70JQsAtWX5T8oJT">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 flex flex-col">
+                        <p class="font-manrope text-2xl text-primary font-medium tracking-tight mb-6">
+                            “Fikirleri çalışan dijital ürünlere dönüştürüyorum.”
+                        </p>
+                        <div class="space-y-4 text-on-surface-variant text-base leading-relaxed">
+                            <p>
+                                Merhaba, ben Mahmut. Modern web teknolojilerine ilgi duyan, kullanıcı deneyimini ve temiz kod yaklaşımını önemseyen bir yazılım geliştiriciyim. Kurumsal düzeyde .NET ekosistemi, modern önyüz çözümleri ve verimli veri tabanı mimarileri üzerine çalışıyorum.
+                            </p>
+                            <p>
+                                Yazılım geliştirme sürecini karmaşık yapılar yerine; mühendislik disiplinine dayanan modüler, anlaşılır ve gelecekte kolayca ölçeklenebilen sistemler kurmak olarak yorumluyorum.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
+                            <div class="bg-surface p-4 rounded-xl border border-surface-container-highest">
+                                <span class="font-mono text-xs text-outline block mb-1">KONUM</span>
+                                <span class="font-manrope font-semibold text-primary">İzmir, Türkiye</span>
+                            </div>
+                            <div class="bg-surface p-4 rounded-xl border border-surface-container-highest">
+                                <span class="font-mono text-xs text-outline block mb-1">UZMANLIK</span>
+                                <span class="font-manrope font-semibold text-primary">Web Dev</span>
+                            </div>
+                            <div class="bg-surface p-4 rounded-xl border border-surface-container-highest">
+                                <span class="font-mono text-xs text-outline block mb-1">ODAK</span>
+                                <span class="font-manrope font-semibold text-primary">Full Stack .NET</span>
+                            </div>
+                            <div class="bg-surface p-4 rounded-xl border border-surface-container-highest">
+                                <span class="font-mono text-xs text-outline block mb-1">YAKLAŞIM</span>
+                                <span class="font-manrope font-semibold text-primary">Clean Code</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SKILLS -->
+        <section class="page-section w-full py-24 bg-surface" id="yeteneklerim">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-baseline justify-between pb-4 mb-12 border-b border-surface-container-highest">
+                    <div class="flex items-baseline gap-2">
+                        <span class="font-mono text-xs text-secondary font-bold tracking-widest">02 /</span>
+                        <span class="font-mono text-xs text-outline tracking-wider uppercase">TEKNOLOJİ EKOSİSTEMİ</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-1">
+                            <button aria-label="Yukarı Kaydır" class="section-nav-up h-8 w-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="hakkimda" title="Yukarı Kaydır (Hakkımda)" type="button">
+                                <span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+                            </button>
+                            <button aria-label="Aşağı Kaydır" class="section-nav-down h-8 w-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="projelerim" title="Aşağı Kaydır (Projelerim)" type="button">
+                                <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+                            </button>
+                        </div>
+                        <h2 class="font-manrope text-3xl text-primary font-bold">Yeteneklerim</h2>
+                    </div>
+                </div><p class="text-on-surface-variant font-mono text-xs sm:text-sm tracking-wide -mt-6 mb-10 max-w-2xl">Fikirden canlı ürüne uzanan geliştirme sürecinde kullandığım araçlar ve teknolojiler.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Backend -->
+                    <div class="bg-surface-container-low p-8 rounded-2xl border border-surface-container-highest flex flex-col justify-between hover:bg-surface-container transition-colors min-h-[340px]">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-primary text-surface flex items-center justify-center mb-6">
+                                <span class="material-symbols-outlined text-[24px]">dns</span>
+                            </div>
+                            <h3 class="font-manrope font-bold text-xl text-primary mb-3 leading-snug">Backend Development</h3>
+                            <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Güvenli, yüksek işlem hacmine uygun RESTful API mimarileri ve iş mantığı çözümleri.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 font-mono text-xs pt-4">
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">C#</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">ASP.NET Core</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">EF Core</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">Web API</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">LINQ</span>
+                        </div>
+                    </div>
+                    <!-- Frontend -->
+                    <div class="bg-surface-container-low p-8 rounded-2xl border border-surface-container-highest flex flex-col justify-between hover:bg-surface-container transition-colors min-h-[340px]">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-secondary text-surface flex items-center justify-center mb-6">
+                                <span class="material-symbols-outlined text-[24px]">devices</span>
+                            </div>
+                            <h3 class="font-manrope font-bold text-xl text-primary mb-3 leading-snug">Frontend Development</h3>
+                            <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Hızlı, responsive ve bütün cihazlarda kusursuz çalışan kullanıcı dostu temiz arayüzler.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 font-mono text-xs pt-4">
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">HTML5</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">CSS3</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">JavaScript</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">Bootstrap 5</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">Tailwind</span>
+                        </div>
+                    </div>
+                    <!-- Veritabanı -->
+                    <div class="bg-surface-container-low p-8 rounded-2xl border border-surface-container-highest flex flex-col justify-between hover:bg-surface-container transition-colors min-h-[340px]">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-primary flex items-center justify-center mb-6">
+                                <span class="material-symbols-outlined text-[24px]">database</span>
+                            </div>
+                            <h3 class="font-manrope font-bold text-xl text-primary mb-3 leading-snug">Veritabanı</h3>
+                            <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">İlişkisel veri tasarımı, sorgu optimizasyonu ve yüksek tutarlılık çözümleri.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 font-mono text-xs pt-4">
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">MS SQL</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">PostgreSQL</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">MySQL</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">Indexes</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">Procedures</span>
+                        </div>
+                    </div>
+                    <!-- Araçlar & Mimari -->
+                    <div class="bg-surface-container-low p-8 rounded-2xl border border-surface-container-highest flex flex-col justify-between hover:bg-surface-container transition-colors min-h-[340px]">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-surface-container-highest text-primary flex items-center justify-center mb-6">
+                                <span class="material-symbols-outlined text-[24px]">architecture</span>
+                            </div>
+                            <h3 class="font-manrope font-bold text-xl text-primary mb-3 leading-snug">Araçlar &amp; Mimari</h3>
+                            <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Sürdürülebilir mühendislik pratikleri, modern CI/CD ve geliştirme ortamları.</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 font-mono text-xs pt-4">
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">Git / GitHub</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">Clean Arch</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">SOLID</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">Postman</span>
+                            <span class="bg-surface px-3 py-1.5 rounded-lg border border-surface-container-highest">Swagger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PROJECTS -->
+        <section class="page-section w-full py-24 bg-surface-container-low" id="projelerim">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-baseline justify-between pb-4 mb-8 border-b border-surface-container-highest">
+                    <div class="flex items-baseline gap-2">
+                        <span class="font-mono text-xs text-secondary font-bold tracking-widest">03 /</span>
+                        <span class="font-mono text-xs text-outline tracking-wider uppercase">SEÇİLMİŞ ÇALIŞMALAR</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-1">
+                            <button aria-label="Yukarı Kaydır" class="section-nav-up h-8 w-8 rounded-lg bg-surface hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="yeteneklerim" title="Yukarı Kaydır (Yeteneklerim)" type="button">
+                                <span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+                            </button>
+                            <button aria-label="Aşağı Kaydır" class="section-nav-down h-8 w-8 rounded-lg bg-surface hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="deneyim" title="Aşağı Kaydır (Deneyim)" type="button">
+                                <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+                            </button>
+                        </div>
+                        <h2 class="font-manrope text-3xl text-primary font-bold">Projelerim</h2>
+                    </div>
+                </div><p class="text-on-surface-variant font-mono text-xs sm:text-sm tracking-wide -mt-4 mb-8 max-w-2xl">Geliştirdiğim uygulamalardan ve üzerinde çalıştığım dijital çözümlerden seçtiklerim.</p>
+
+                <!-- Filters -->
+                <div class="flex flex-wrap items-center gap-2 mb-10" id="project-filters">
+                    <button class="filter-btn active bg-primary text-surface px-4 py-1.5 rounded-lg font-mono text-xs uppercase cursor-pointer transition-all" data-filter="all" type="button">Tümü</button>
+                    <button class="filter-btn bg-surface hover:bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-lg font-mono text-xs uppercase border border-surface-container-highest cursor-pointer transition-all" data-filter="web" type="button">Web Uygulamaları</button>
+                    <button class="filter-btn bg-surface hover:bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-lg font-mono text-xs uppercase border border-surface-container-highest cursor-pointer transition-all" data-filter="api" type="button">Backend / API</button>
+                    <button class="filter-btn bg-surface hover:bg-surface-container text-on-surface-variant px-4 py-1.5 rounded-lg font-mono text-xs uppercase border border-surface-container-highest cursor-pointer transition-all" data-filter="dashboard" type="button">Dashboard</button>
+                </div>
+
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full" id="projects-grid">
+                    <!-- Proje 1 -->
+                    <div class="project-item flex flex-col bg-surface rounded-2xl overflow-hidden border border-surface-container-highest shadow-sm hover:shadow-md transition-all" data-category="web">
+                        <div class="relative h-64 bg-surface-container overflow-hidden group">
+                            <img alt="Arıza ve Bakım Yönetim Sistemi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDzlMhGJ4GYpAnPLbOlwA-MjJbL15Pr9OQThhS-1tgM636VF1Nv0to7bx9RlwKjA1FyyWq8h37pJ_fc6ZOJHSnGOSxiWkZRaAiJwU4VDtFv74l3qxqAEqvNKDUFLA7BI8OSw7iOrr1C9PRLz-1rymzqSK8llbJgMlrr-31KDSTFUixmxZ_WKPJFL0I6_1Vk050qJ6PUvcmNc7Ku3_vyhwIqQh05rzycc8ipUxSILHINFaxkrW74AoDUw">
+                            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-white font-mono text-[11px] px-2.5 py-0.5 rounded">WEB UYGULAMASI</span>
+                            <span class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md text-on-surface font-mono text-[11px] px-2 py-0.5 rounded flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[13px]">collections</span> 4 Görsel
+                            </span>
+                        </div>
+                        <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-outline block mb-2 uppercase tracking-wide">PROJE 01 • 2024</span>
+                                <h3 class="font-manrope font-bold text-xl sm:text-2xl text-primary mb-3 leading-snug">Arıza ve Bakım Yönetim Sistemi</h3>
+                                <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">İşletmelerde arıza bildirimlerini, görev atamalarını ve periyodik bakım süreçlerini yöneten uçtan uca otomasyon.</p>
+                                <div class="flex flex-wrap gap-2 font-mono text-xs mb-8">
+                                    <span class="bg-surface-container px-2.5 py-1 rounded border border-surface-container-highest">ASP.NET Core</span>
+                                    <span class="bg-surface-container px-2.5 py-1 rounded border border-surface-container-highest">SQL Server</span>
+                                    <span class="bg-surface-container px-2.5 py-1 rounded border border-surface-container-highest">Bootstrap 5</span>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-surface-container-highest flex items-center justify-between">
+                                <button class="open-modal-btn font-mono text-xs uppercase font-bold text-primary hover:text-secondary inline-flex items-center gap-1.5 cursor-pointer" data-project="1" type="button">
+                                    Projeyi İncele <span class="material-symbols-outlined text-[16px]">visibility</span>
+                                </button>
+                                <div class="flex items-center gap-2">
+                                    <a class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-primary transition-colors" href="https://github.com" target="_blank"><span class="material-symbols-outlined text-[18px]">code</span></a>
+                                    <a class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-primary transition-colors" href="#demo"><span class="material-symbols-outlined text-[18px]">launch</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 2 -->
+                    <div class="project-item flex flex-col bg-surface rounded-2xl overflow-hidden border border-surface-container-highest shadow-sm hover:shadow-md transition-all" data-category="dashboard">
+                        <div class="relative h-64 bg-surface-container overflow-hidden group">
+                            <img alt="Kurumsal Yönetim Paneli" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7U5o23vPi0Ndnlcodf_lsXjRn9rUwZoPk3lJ5LVUUR8Qz6h-rA_St6pShVwwh36ZG7B_0EQB99uGLRcbMKf0SWgaQ8LSq8SMHs4KQIu4bfAqIJMmY7NflKUI5Um8p_MX53vX2sjVqSHUefVvdz0CBPMKUh5_s-jlHPAcT0BfYwDHa_jX0KLhu6pT-uKyPq9k3eSCF7b1mnOoMon9Z7leSjWudBncHOShnN-3GGZcfu3zVucvTmy4EkA">
+                            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-white font-mono text-[11px] px-2.5 py-0.5 rounded">DASHBOARD</span>
+                            <span class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md text-on-surface font-mono text-[11px] px-2 py-0.5 rounded flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[13px]">collections</span> 4 Görsel
+                            </span>
+                        </div>
+                        <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-outline block mb-2 uppercase tracking-wide">PROJE 02 • 2023</span>
+                                <h3 class="font-manrope font-bold text-xl sm:text-2xl text-primary mb-3 leading-snug">Kurumsal Yönetim Paneli</h3>
+                                <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Operasyonel verilerin anlık takip edildiği, rol bazlı yetkilendirme modüllerine sahip yönetim paneli.</p>
+                                <div class="flex flex-wrap gap-2 font-mono text-xs mb-8">
+                                    <span class="bg-surface-container px-2.5 py-1 rounded border border-surface-container-highest">C#</span>
+                                    <span class="bg-surface-container px-2.5 py-1 rounded border border-surface-container-highest">.NET 8</span>
+                                    <span class="bg-surface-container px-2.5 py-1 rounded border border-surface-container-highest">Chart.js</span>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-surface-container-highest flex items-center justify-between">
+                                <button class="open-modal-btn font-mono text-xs uppercase font-bold text-primary hover:text-secondary inline-flex items-center gap-1.5 cursor-pointer" data-project="2" type="button">
+                                    Projeyi İncele <span class="material-symbols-outlined text-[16px]">visibility</span>
+                                </button>
+                                <div class="flex items-center gap-2">
+                                    <a class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-primary transition-colors" href="https://github.com" target="_blank"><span class="material-symbols-outlined text-[18px]">code</span></a>
+                                    <a class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-primary transition-colors" href="#demo"><span class="material-symbols-outlined text-[18px]">launch</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proje 3 -->
+                    <div class="project-item flex flex-col bg-surface rounded-2xl overflow-hidden border border-surface-container-highest shadow-sm hover:shadow-md transition-all" data-category="api">
+                        <div class="relative h-64 bg-surface-container overflow-hidden group">
+                            <img alt="API Tabanlı Web Uygulaması" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVed_TM4lFX7R0LAn95SznTUiekkQtC8Tuhqc9IwONIWypoDzkSZti0t_f2K2Kk-s0G2I-5CNLqD5FM3V5_nWmIXJSEiD1Rn0qC5iXzch8KqihZ-0-8NXBC9kvwKDMdrAK3MBl7dhdOQeMqjCStz1Dvq0e0Zc-4dTjTJDIg32HwnFexJUsG263o6-vaZ5x-bxXZjr05aMuAj1zS5PqcMuAZYt5A1FuNqg5WlM8cMjFabjvnHY7XfgSXA">
+                            <span class="absolute top-3 left-3 bg-black/80 backdrop-blur-md text-white font-mono text-[11px] px-2.5 py-0.5 rounded">BACKEND / API</span>
+                            <span class="absolute top-3 right-3 bg-surface/90 backdrop-blur-md text-on-surface font-mono text-[11px] px-2 py-0.5 rounded flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[13px]">collections</span> 4 Görsel
+                            </span>
+                        </div>
+                        <div class="p-6 sm:p-8 flex flex-col flex-1 justify-between">
+                            <div>
+                                <span class="font-mono text-xs text-outline block mb-2 uppercase tracking-wide">PROJE 03 • 2024</span>
+                                <h3 class="font-manrope font-bold text-xl sm:text-2xl text-primary mb-3 leading-snug">API Tabanlı Web Uygulaması</h3>
+                                <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">REST API mimarisi, JWT tabanlı kimlik doğrulama ve CQRS deseni uygulanan yüksek performanslı servis katmanı.</p>
+                                <div class="flex flex-wrap gap-2 font-mono text-xs mb-8">
+                                    <span class="bg-surface-container px-2.5 py-1 rounded border border-surface-container-highest">ASP.NET Web API</span>
+                                    <span class="bg-surface-container px-2.5 py-1 rounded border border-surface-container-highest">PostgreSQL</span>
+                                    <span class="bg-surface-container px-2.5 py-1 rounded border border-surface-container-highest">Swagger</span>
+                                </div>
+                            </div>
+                            <div class="pt-4 border-t border-surface-container-highest flex items-center justify-between">
+                                <button class="open-modal-btn font-mono text-xs uppercase font-bold text-primary hover:text-secondary inline-flex items-center gap-1.5 cursor-pointer" data-project="3" type="button">
+                                    Projeyi İncele <span class="material-symbols-outlined text-[16px]">visibility</span>
+                                </button>
+                                <div class="flex items-center gap-2">
+                                    <a class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-primary transition-colors" href="https://github.com" target="_blank"><span class="material-symbols-outlined text-[18px]">code</span></a>
+                                    <a class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-primary transition-colors" href="#demo"><span class="material-symbols-outlined text-[18px]">launch</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. EXPERIENCE -->
+        <section class="page-section w-full py-24 bg-surface" id="deneyim">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-baseline justify-between pb-4 mb-12 border-b border-surface-container-highest">
+                    <div class="flex items-baseline gap-2">
+                        <span class="font-mono text-xs text-secondary font-bold tracking-widest">04 /</span>
+                        <span class="font-mono text-xs text-outline tracking-wider uppercase">PROFESYONEL YOLCULUK</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-1">
+                            <button aria-label="Yukarı Kaydır" class="section-nav-up h-8 w-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="projelerim" title="Yukarı Kaydır (Projelerim)" type="button">
+                                <span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+                            </button>
+                            <button aria-label="Aşağı Kaydır" class="section-nav-down h-8 w-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="egitim" title="Aşağı Kaydır (Eğitim)" type="button">
+                                <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+                            </button>
+                        </div>
+                        <h2 class="font-manrope text-3xl text-primary font-bold">Deneyim</h2>
+                    </div>
+                </div><p class="text-on-surface-variant font-mono text-xs sm:text-sm tracking-wide -mt-6 mb-10 max-w-2xl">Yazılım geliştirme süreçlerinde aldığım roller ve katkı sağladığım projeler.</p>
+
+                <!-- Timeline -->
+                <div class="relative pl-6 sm:pl-10 space-y-8 before:content-[''] before:absolute before:left-2 sm:before:left-3 before:top-3 before:bottom-3 before:w-[2px] before:bg-surface-container-highest">
+                    <!-- 1 -->
+                    <div class="relative">
+                        <span class="absolute -left-6 sm:-left-10 top-1.5 w-4 h-4 rounded-full bg-primary ring-4 ring-surface"></span>
+                        <div class="bg-surface-container-low p-6 rounded-2xl border border-surface-container-highest">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                                <span class="font-mono text-xs text-secondary font-semibold">2022 — GÜNÜMÜZ</span>
+                                <span class="font-mono text-[11px] bg-tertiary-fixed text-primary px-2 py-0.5 rounded w-max">Tam Zamanlı • Hibrit</span>
+                            </div>
+                            <h3 class="font-manrope text-lg font-bold text-primary">Kıdemli Yazılım Geliştirici</h3>
+                            <span class="text-xs text-outline block mb-3">Atelier Digital Solutions / İstanbul</span>
+                            <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">Mikroservis mimarisinde .NET Core servislerinin tasarımı, veritabanı optimizasyonları ve kurumsal web arayüzlerinin geliştirilmesi.</p>
+                            <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+                                <span class="bg-surface px-2 py-0.5 rounded border border-surface-container-highest">.NET 8</span>
+                                <span class="bg-surface px-2 py-0.5 rounded border border-surface-container-highest">Clean Architecture</span>
+                                <span class="bg-surface px-2 py-0.5 rounded border border-surface-container-highest">MS SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="relative">
+                        <span class="absolute -left-6 sm:-left-10 top-1.5 w-4 h-4 rounded-full bg-secondary ring-4 ring-surface"></span>
+                        <div class="bg-surface-container-low p-6 rounded-2xl border border-surface-container-highest">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                                <span class="font-mono text-xs text-secondary font-semibold">2020 — 2022</span>
+                                <span class="font-mono text-[11px] bg-surface-container-high text-on-surface-variant px-2 py-0.5 rounded w-max">Tam Zamanlı</span>
+                            </div>
+                            <h3 class="font-manrope text-lg font-bold text-primary">Full Stack .NET Developer</h3>
+                            <span class="text-xs text-outline block mb-3">Nova Bilişim Teknolojileri</span>
+                            <p class="text-sm text-on-surface-variant mb-4 leading-relaxed">B2B ve B2C e-ticaret panellerinin backend API entegrasyonları ve SQL Server sorgu optimizasyonları.</p>
+                            <div class="flex flex-wrap gap-1.5 font-mono text-xs">
+                                <span class="bg-surface px-2 py-0.5 rounded border border-surface-container-highest">ASP.NET MVC</span>
+                                <span class="bg-surface px-2 py-0.5 rounded border border-surface-container-highest">C#</span>
+                                <span class="bg-surface px-2 py-0.5 rounded border border-surface-container-highest">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. EDUCATION -->
+        <section class="page-section w-full py-24 bg-surface-container-low" id="egitim">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-baseline justify-between pb-4 mb-12 border-b border-surface-container-highest">
+                    <div class="flex items-baseline gap-2">
+                        <span class="font-mono text-xs text-secondary font-bold tracking-widest">05 /</span>
+                        <span class="font-mono text-xs text-outline tracking-wider uppercase">AKADEMİK YOLCULUK</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-1">
+                            <button aria-label="Yukarı Kaydır" class="section-nav-up h-8 w-8 rounded-lg bg-surface hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="deneyim" title="Yukarı Kaydır (Deneyim)" type="button">
+                                <span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+                            </button>
+                            <button aria-label="Aşağı Kaydır" class="section-nav-down h-8 w-8 rounded-lg bg-surface hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="felsefe" title="Aşağı Kaydır (Nasıl Çalışıyorum?)" type="button">
+                                <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+                            </button>
+                        </div>
+                        <h2 class="font-manrope text-3xl text-primary font-bold">Eğitim</h2>
+                    </div>
+                </div><p class="text-on-surface-variant font-mono text-xs sm:text-sm tracking-wide -mt-6 mb-10 max-w-2xl">Temel mühendislik prensipleri ve sürekli öğrenme sürecimin akademik bileşenleri.</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <div class="lg:col-span-5 bg-surface p-6 rounded-2xl border border-surface-container-highest flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-xs text-secondary block mb-1">2016 — 2020</span>
+                            <h3 class="font-manrope text-xl text-primary font-bold mb-1">İstanbul Teknik Üniversitesi</h3>
+                            <span class="text-sm text-outline block mb-4">Bilgisayar Mühendisliği (Lisans)</span>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Yazılım mühendisliği temelleri, algoritmalar, ilişkisel veri tabanı tasarımı ve dağıtık sistemler eğitimi.</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-surface p-5 rounded-2xl border border-surface-container-highest">
+                            <span class="font-mono text-[11px] text-secondary block mb-1">2023 • MICROSOFT</span>
+                            <h4 class="font-manrope font-bold text-sm text-primary mb-1">ASP.NET Core Enterprise Arch</h4>
+                            <p class="text-xs text-on-surface-variant">Kurumsal RESTful API mimarileri ve EF Core desenleri.</p>
+                        </div>
+                        <div class="bg-surface p-5 rounded-2xl border border-surface-container-highest">
+                            <span class="font-mono text-[11px] text-secondary block mb-1">2023 • SCRUM.ORG</span>
+                            <h4 class="font-manrope font-bold text-sm text-primary mb-1">Professional Scrum Developer</h4>
+                            <p class="text-xs text-on-surface-variant">Agile yazılım geliştirme yaşam döngüsü standartları.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. PHILOSOPHY -->
+        <section class="page-section w-full py-24 bg-surface" id="felsefe">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-baseline justify-between pb-4 mb-12 border-b border-surface-container-highest">
+                    <div>
+                        <h2 class="font-manrope text-3xl text-primary font-bold mb-1">Nasıl Çalışıyorum?</h2>
+                        <p class="text-sm text-on-surface-variant">Yazılımın sürdürülebilir, anlaşılır ve kullanıcı odaklı olması gerektiğine inanıyorum.</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <button aria-label="Yukarı Kaydır" class="section-nav-up h-8 w-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="egitim" title="Yukarı Kaydır (Eğitim)" type="button">
+                            <span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+                        </button>
+                        <button aria-label="Aşağı Kaydır" class="section-nav-down h-8 w-8 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="iletisim" title="Aşağı Kaydır (İletişim)" type="button">
+                            <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-surface-container-low p-6 rounded-2xl border border-surface-container-highest">
+                        <span class="font-manrope text-5xl font-extrabold text-surface-container-highest block mb-2">01</span>
+                        <h3 class="font-manrope font-bold text-lg text-primary mb-2">Analiz Et</h3>
+                        <p class="text-sm text-on-surface-variant">İhtiyacı doğru anlayıp karmaşıklığı baştan ayıklayarak en sade mimariyi kurgularım.</p>
+                    </div>
+                    <div class="bg-surface-container-low p-6 rounded-2xl border border-surface-container-highest">
+                        <span class="font-manrope text-5xl font-extrabold text-surface-container-highest block mb-2">02</span>
+                        <h3 class="font-manrope font-bold text-lg text-primary mb-2">Tasarla &amp; Geliştir</h3>
+                        <p class="text-sm text-on-surface-variant">Modüler, test edilebilir ve okunabilir kod tabanı oluştururum.</p>
+                    </div>
+                    <div class="bg-surface-container-low p-6 rounded-2xl border border-surface-container-highest">
+                        <span class="font-manrope text-5xl font-extrabold text-surface-container-highest block mb-2">03</span>
+                        <h3 class="font-manrope font-bold text-lg text-primary mb-2">Test Et &amp; İyileştir</h3>
+                        <p class="text-sm text-on-surface-variant">Performans ve kod kalitesini sürekli izleyerek sistemi parlatırım.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. CONTACT -->
+        <section class="page-section w-full py-24 bg-surface-container-low" id="iletisim">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-baseline justify-between pb-4 mb-12 border-b border-surface-container-highest">
+                    <div class="flex items-baseline gap-2">
+                        <span class="font-mono text-xs text-secondary font-bold tracking-widest">06 /</span>
+                        <span class="font-mono text-xs text-outline tracking-wider uppercase">BAĞLANTI KURALIM</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-1">
+                            <button aria-label="Yukarı Kaydır" class="section-nav-up h-8 w-8 rounded-lg bg-surface hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="felsefe" title="Yukarı Kaydır (Nasıl Çalışıyorum?)" type="button">
+                                <span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+                            </button>
+                            <button aria-label="Sayfanın Başına Çık" class="section-nav-up h-8 w-8 rounded-lg bg-surface hover:bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest cursor-pointer" data-target="ana-sayfa" title="Sayfanın Başına Çık" type="button">
+                                <span class="material-symbols-outlined text-[18px]">vertical_align_top</span>
+                            </button>
+                        </div>
+                        <h2 class="font-manrope text-3xl text-primary font-bold">İletişim</h2>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    <div class="lg:col-span-5 flex flex-col space-y-4">
+                        <h3 class="font-manrope text-2xl text-primary font-bold">Birlikte güzel bir şeyler geliştirelim.</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed mb-4">Bir proje fikriniz veya iş birliği öneriniz mi var? İletişime geçmekten çekinmeyin.</p>
+                        <div class="space-y-3 font-mono text-xs">
+                            <a class="flex items-center gap-3 p-4 rounded-xl bg-surface border border-surface-container-highest text-primary hover:text-secondary transition-colors" href="mailto:mcivicioglu@domain.com">
+                                <span class="material-symbols-outlined text-[20px]">mail</span>
+                                <span>mcivicioglu@domain.com</span>
+                            </a>
+                            <a class="flex items-center gap-3 p-4 rounded-xl bg-surface border border-surface-container-highest text-primary hover:text-secondary transition-colors" href="https://linkedin.com" target="_blank">
+                                <span class="material-symbols-outlined text-[20px]">person_pin</span>
+                                <span>linkedin.com/in/mcivicioglu</span>
+                            </a>
+                            <a class="flex items-center gap-3 p-4 rounded-xl bg-surface border border-surface-container-highest text-primary hover:text-secondary transition-colors" href="https://github.com" target="_blank">
+                                <span class="material-symbols-outlined text-[20px]">terminal</span>
+                                <span>github.com/mcivicioglu</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 bg-surface p-8 rounded-2xl border border-surface-container-highest">
+                        <form class="space-y-4" id="contact-form">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block font-mono text-xs uppercase mb-1 text-primary">Adınız Soyadınız *</label>
+                                    <input class="w-full bg-surface-container-low px-4 py-2.5 rounded-lg border border-surface-container-highest text-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Ahmet Yılmaz" required="" type="text">
+                                </div>
+                                <div>
+                                    <label class="block font-mono text-xs uppercase mb-1 text-primary">E-posta Adresiniz *</label>
+                                    <input class="w-full bg-surface-container-low px-4 py-2.5 rounded-lg border border-surface-container-highest text-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="ahmet@sirket.com" required="" type="email">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block font-mono text-xs uppercase mb-1 text-primary">Konu *</label>
+                                <input class="w-full bg-surface-container-low px-4 py-2.5 rounded-lg border border-surface-container-highest text-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Yeni Proje İş Birliği" required="" type="text">
+                            </div>
+                            <div>
+                                <label class="block font-mono text-xs uppercase mb-1 text-primary">Mesajınız *</label>
+                                <textarea class="w-full bg-surface-container-low px-4 py-2.5 rounded-lg border border-surface-container-highest text-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Mesaj detayları..." required="" rows="4"></textarea>
+                            </div>
+                            <button class="bg-primary text-surface px-6 py-2.5 rounded-lg font-mono text-xs uppercase font-semibold hover:opacity-90 transition-all cursor-pointer" type="submit">
+                                Mesaj Gönder
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-surface border-t border-surface-container-highest py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pb-8 border-b border-surface-container-highest">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="font-manrope text-lg text-primary font-bold tracking-tight">MC</span>
+                        <span class="text-outline text-xs font-mono">• ATELIER DE SOFTWARE</span>
+                    </div>
+                    <p class="text-sm text-on-surface-variant italic font-manrope">"İyi fikirler, iyi kodlarla hayat bulur."</p>
+                    <div class="flex flex-wrap items-center gap-3 font-mono text-xs text-outline pt-2">
+                        <span class="bg-surface-container px-2 py-0.5 rounded text-on-surface-variant font-medium">JUNIOR .NET DEVELOPER</span><span>• İzmir (UTC+3) 38.4205° N, 27.1311° E</span>
+                    </div>
+                </div><div class="flex flex-col md:items-end justify-between gap-4">
+                <div>
+                    <span class="font-mono text-xs text-outline uppercase block md:text-right mb-2">BAĞLANTILAR</span>
+                    <div class="flex items-center gap-4 font-mono text-xs"><a class="text-primary hover:text-secondary transition-colors" href="https://github.com/mcivicioglu" target="_blank">GİTHUB</a><a class="text-primary hover:text-secondary transition-colors" href="https://linkedin.com/in/mcivicioglu" target="_blank">LİNKEDİN</a><a class="text-primary hover:text-secondary transition-colors" href="mailto:mcivicioglu@domain.com">E-POSTA</a></div>
+                </div><button class="section-nav-up inline-flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high text-primary px-3 py-1.5 rounded-lg border border-surface-container-highest font-mono text-xs uppercase cursor-pointer transition-all" data-target="ana-sayfa" type="button"><span>YUKARI ÇIK</span><span class="material-symbols-outlined text-[16px]">arrow_upward</span></button>
+            </div>
+        </div><div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-outline"><div>© 2026 MC. Tüm hakları saklıdır. Basal &amp; Digital Precision.</div><div class="flex items-center gap-1 text-[11px]"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span><span>Designed &amp; Engineered with Precision</span></div></div>
+    </div>
+</footer>
+
+<!-- PROJECT DETAIL MODAL WITH INTERACTIVE SLIDER / CAROUSEL -->
+<div aria-modal="true" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-250" id="project-modal" role="dialog">
+    <div class="bg-surface rounded-2xl max-w-3xl w-full p-6 shadow-2xl relative max-h-[92vh] flex flex-col border border-surface-container-highest overflow-hidden">
+        <!-- Header -->
+        <div class="flex items-start justify-between gap-4 pb-4 border-b border-surface-container-highest">
+            <div>
+                <div class="flex items-center gap-2 mb-1">
+                    <span class="font-mono text-[11px] uppercase px-2 py-0.5 rounded bg-secondary-container text-secondary font-semibold" id="modal-category">KATEGORİ</span>
+                    <span class="font-mono text-[11px] text-outline" id="modal-date">2024</span>
+                </div>
+                <h3 class="font-manrope text-2xl text-primary font-bold" id="modal-title">Proje Başlığı</h3>
+            </div>
+            <button aria-label="Kapat" class="text-on-surface-variant hover:text-primary p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer" id="close-modal-btn" type="button">
+                <span class="material-symbols-outlined text-[20px] block">close</span>
+            </button>
+        </div>
+
+        <!-- Scrollable Body with Slider -->
+        <div class="overflow-y-auto pr-1 py-4 space-y-6 flex-1">
+            <!-- Carousel Viewport -->
+            <div class="relative w-full rounded-xl overflow-hidden bg-surface-container border border-surface-container-highest shadow-sm">
+                <div class="relative w-full h-64 sm:h-80 md:h-96 overflow-hidden">
+                    <div class="flex h-full w-full transition-transform duration-300 ease-out" id="slider-track">
+                        <!-- Dynamically populated slides -->
+                    </div>
+                    <!-- Left/Right Controls -->
+                    <button aria-label="Önceki Görsel" class="absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center transition-all cursor-pointer z-10" id="slider-prev-btn" type="button">
+                        <span class="material-symbols-outlined text-[22px]">chevron_left</span>
+                    </button>
+                    <button aria-label="Sonraki Görsel" class="absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/60 hover:bg-black/90 text-white flex items-center justify-center transition-all cursor-pointer z-10" id="slider-next-btn" type="button">
+                        <span class="material-symbols-outlined text-[22px]">chevron_right</span>
+                    </button>
+                    <!-- Counter Badge -->
+                    <div class="absolute top-3 right-3 bg-black/75 backdrop-blur-md text-white font-mono text-xs px-2.5 py-1 rounded-full z-10 flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[13px] text-tertiary-fixed">image</span>
+                        <span id="slider-counter">1 / 4</span>
+                    </div>
+                    <!-- Caption -->
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 pt-6 z-10">
+                        <p class="font-mono text-xs text-white text-center truncate" id="slider-caption">Ekran Görünümü</p>
+                    </div>
+                </div>
+                <!-- Pagination Dots -->
+                <div class="flex items-center justify-center gap-2 py-2 bg-surface-container-low border-t border-surface-container-highest" id="slider-dots"></div>
+            </div>
+
+            <!-- Description and Tech -->
+            <div class="space-y-4 text-sm text-on-surface-variant">
+                <div>
+                    <h4 class="font-manrope font-bold text-primary text-base mb-1">Çözülen Problem &amp; Amaç</h4>
+                    <p class="leading-relaxed" id="modal-problem"></p>
+                </div>
+                <div>
+                    <h4 class="font-manrope font-bold text-primary text-base mb-1">Mimari &amp; Teknik Yaklaşım</h4>
+                    <p class="leading-relaxed" id="modal-architecture"></p>
+                </div>
+                <div>
+                    <h4 class="font-manrope font-bold text-primary text-base mb-2">Kullanılan Teknolojiler</h4>
+                    <div class="flex flex-wrap gap-1.5 font-mono text-xs" id="modal-tags"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Actions -->
+        <div class="pt-4 border-t border-surface-container-highest flex items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <a class="inline-flex items-center gap-1.5 bg-primary text-surface px-4 py-2 rounded-lg font-mono text-xs uppercase" href="https://github.com" id="modal-github" target="_blank">
+                    <span class="material-symbols-outlined text-[16px]">code</span> GitHub
+                </a>
+                <a class="inline-flex items-center gap-1.5 bg-surface-container hover:bg-surface-container-high px-4 py-2 rounded-lg font-mono text-xs uppercase border border-surface-container-highest" href="#demo" id="modal-demo">
+                    <span class="material-symbols-outlined text-[16px]">launch</span> Canlı Demo
+                </a>
+            </div>
+            <button class="bg-surface-container hover:bg-surface-container-high px-4 py-2 rounded-lg font-mono text-xs uppercase border border-surface-container-highest cursor-pointer" id="modal-dismiss" type="button">Kapat</button>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+        // THEME SWITCH LOGIC
+        (function initTheme() {
+            const themeBtn = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-toggle-icon');
+            const STORAGE_KEY = 'portfolio-theme';
+
+            function isDark() { return document.documentElement.classList.contains('dark'); }
+            function updateIcon(dark) {
+                if (!themeIcon) return;
+                themeIcon.textContent = dark ? 'light_mode' : 'dark_mode';
+            }
+            function applyTheme(dark) {
+                document.documentElement.classList.add('theme-transitioning');
+                if (dark) {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem(STORAGE_KEY, 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem(STORAGE_KEY, 'light');
+                }
+                updateIcon(dark);
+                setTimeout(() => document.documentElement.classList.remove('theme-transitioning'), 300);
+            }
+            updateIcon(isDark());
+            if (themeBtn) {
+                themeBtn.addEventListener('click', () => applyTheme(!isDark()));
+            }
+        })();
+
+        // SECTION SCROLL NAVIGATION (UP & DOWN BUTTONS)
+        (function initSectionNavigation() {
+            const sections = ['ana-sayfa', 'hakkimda', 'yeteneklerim', 'projelerim', 'deneyim', 'egitim', 'felsefe', 'iletisim'];
+
+            function scrollToSection(id) {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+
+            // Bind specific section nav buttons
+            document.querySelectorAll('.section-nav-down').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const targetId = this.getAttribute('data-target');
+                    if (targetId) scrollToSection(targetId);
+                });
+            });
+
+            document.querySelectorAll('.section-nav-up').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const targetId = this.getAttribute('data-target');
+                    if (targetId) scrollToSection(targetId);
+                });
+            });
+
+            // Global sticky prev/next arrows
+            function getCurrentSectionIndex() {
+                const scrollPos = window.scrollY + 200;
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    const el = document.getElementById(sections[i]);
+                    if (el && el.offsetTop <= scrollPos) {
+                        return i;
+                    }
+                }
+                return 0;
+            }
+
+            const prevBtn = document.querySelector('.global-prev-section');
+            const nextBtn = document.querySelector('.global-next-section');
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    const idx = getCurrentSectionIndex();
+                    if (idx > 0) scrollToSection(sections[idx - 1]);
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    const idx = getCurrentSectionIndex();
+                    if (idx < sections.length - 1) scrollToSection(sections[idx + 1]);
+                });
+            }
+
+            // Update dots indicator on scroll
+            const dots = document.querySelectorAll('#section-dots-nav a');
+            window.addEventListener('scroll', () => {
+                const idx = getCurrentSectionIndex();
+                dots.forEach((dot, dIdx) => {
+                    if (dIdx === idx) {
+                        dot.className = 'w-2 h-2 rounded-full bg-primary transition-all duration-300';
+                    } else {
+                        dot.className = 'w-2 h-2 rounded-full bg-outline-variant hover:bg-secondary transition-all duration-300';
+                    }
+                });
+            }, { passive: true });
+        })();
+
+        // TYPEWRITER EFFECT
+        (function initTypewriter() {
+            const roles = ['Web Geliştirici', 'Full Stack Developer', '.NET Developer', 'Problem Çözücü'];
+            let roleIndex = 0, charIndex = 0, isDeleting = false;
+            const target = document.getElementById('typewriter-text');
+            if (!target) return;
+
+            function type() {
+                const current = roles[roleIndex];
+                if (isDeleting) {
+                    target.textContent = current.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    target.textContent = current.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+                let speed = isDeleting ? 40 : 80;
+                if (!isDeleting && charIndex === current.length) {
+                    speed = 1500;
+                    isDeleting = true;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    speed = 300;
+                }
+                setTimeout(type, speed);
+            }
+            type();
+        })();
+
+        // PROJECT FILTERS
+        (function initProjectFilters() {
+            const filterButtons = document.querySelectorAll('#project-filters .filter-btn');
+            const projectItems = document.querySelectorAll('#projects-grid .project-item');
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterButtons.forEach(b => {
+                        b.classList.remove('active', 'bg-primary', 'text-surface');
+                        b.classList.add('bg-surface', 'text-on-surface-variant');
+                    });
+                    btn.classList.add('active', 'bg-primary', 'text-surface');
+                    btn.classList.remove('bg-surface', 'text-on-surface-variant');
+                    const filter = btn.getAttribute('data-filter');
+
+                    projectItems.forEach(item => {
+                        const cat = item.getAttribute('data-category');
+                        item.style.display = (filter === 'all' || cat === filter) ? 'flex' : 'none';
+                    });
+                });
+            });
+        })();
+
+        // PROJECT DETAIL MODAL WITH MULTI-IMAGE SLIDER
+        (function initProjectModal() {
+            const modal = document.getElementById('project-modal');
+            const closeBtn = document.getElementById('close-modal-btn');
+            const dismissBtn = document.getElementById('modal-dismiss');
+            const sliderTrack = document.getElementById('slider-track');
+            const sliderDots = document.getElementById('slider-dots');
+            const prevBtn = document.getElementById('slider-prev-btn');
+            const nextBtn = document.getElementById('slider-next-btn');
+            const counterEl = document.getElementById('slider-counter');
+            const captionEl = document.getElementById('slider-caption');
+
+            let currentSlide = 0;
+            let slidesData = [];
+
+            const projects = {
+                '1': {
+                    title: 'Arıza ve Bakım Yönetim Sistemi',
+                    category: 'Web Uygulamaları',
+                    date: '2024 • ENTERPRISE',
+                    problem: 'Kağıt ve dağınık e-posta bildirimlerindeki operasyonel aksaklıkları gidererek görev atamalarını saniyeler seviyesine indiren şeffaf bir iş emri altyapısı.',
+                    architecture: 'ASP.NET Core mimarisi, Clean Architecture ve Repository Pattern prensipleri. EF Core sorgu optimizasyonları ve MS SQL Server indekslemeleri.',
+                    tags: ['ASP.NET Core 8', 'Clean Architecture', 'SQL Server', 'EF Core', 'Bootstrap 5'],
+                    github: 'https://github.com',
+                    demo: '#demo',
+                    slides: [
+                        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDzlMhGJ4GYpAnPLbOlwA-MjJbL15Pr9OQThhS-1tgM636VF1Nv0to7bx9RlwKjA1FyyWq8h37pJ_fc6ZOJHSnGOSxiWkZRaAiJwU4VDtFv74l3qxqAEqvNKDUFLA7BI8OSw7iOrr1C9PRLz-1rymzqSK8llbJgMlrr-31KDSTFUixmxZ_WKPJFL0I6_1Vk050qJ6PUvcmNc7Ku3_vyhwIqQh05rzycc8ipUxSILHINFaxkrW74AoDUw', caption: 'Görünüm 1: Ana Bakım & Arıza Takip Paneli, Durum Kartları ve Tablo' },
+                        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA7U5o23vPi0Ndnlcodf_lsXjRn9rUwZoPk3lJ5LVUUR8Qz6h-rA_St6pShVwwh36ZG7B_0EQB99uGLRcbMKf0SWgaQ8LSq8SMHs4KQIu4bfAqIJMmY7NflKUI5Um8p_MX53vX2sjVqSHUefVvdz0CBPMKUh5_s-jlHPAcT0BfYwDHa_jX0KLhu6pT-uKyPq9k3eSCF7b1mnOoMon9Z7leSjWudBncHOShnN-3GGZcfu3zVucvTmy4EkA', caption: 'Görünüm 2: Arıza Çözüm Süreleri & Ekipler Arası Dağılım Grafiği' },
+                        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCVed_TM4lFX7R0LAn95SznTUiekkQtC8Tuhqc9IwONIWypoDzkSZti0t_f2K2Kk-s0G2I-5CNLqD5FM3V5_nWmIXJSEiD1Rn0qC5iXzch8KqihZ-0-8NXBC9kvwKDMdrAK3MBl7dhdOQeMqjCStz1Dvq0e0Zc-4dTjTJDIg32HwnFexJUsG263o6-vaZ5x-bxXZjr05aMuAj1zS5PqcMuAZYt5A1FuNqg5WlM8cMjFabjvnHY7XfgSXA', caption: 'Görünüm 3: API Entegrasyonları ve Swagger Endpoint Dokümantasyonu' },
+                        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAffAeA6OWfUPVIH8fZMb36K4TDnjj3wzd-9TfzhowwNJ59hvst3psxFz89oxMP7_o6qEUkvqmfbLWFsr7VevRfpj03psK7xizl_wbuL9ya4JFFX1JzV0HhJ4k3rCEE0fzInowzEXsiqjZI6JcaYk1rFuH-I9XijQ1enbVqL6pkp9mozX26mRP4dj1rQMzWL9PwSTj748GtS7qC_d58dQa0bkhmiyrY66U1Q4w_um4wrThsePLudfbynw', caption: 'Görünüm 4: Detaylı Arıza Formu & Yedek Parça Envanter Seçimi' }
+                    ]
+                },
+                '2': {
+                    title: 'Kurumsal Yönetim Paneli',
+                    category: 'Dashboard & Analitik',
+                    date: '2023 • REALTIME ANALYTICS',
+                    problem: 'Bölünmüş operasyonel verileri, departman KPI göstergelerini ve satış akışlarını tek bir canlı ekranda toplayarak hızlı karar alma sağlamak.',
+                    architecture: '.NET 8 REST API katmanı, Redis Cache ile anlık veri besleme ve Chart.js ile dinamik veri görselleştirmeleri.',
+                    tags: ['C#', '.NET 8', 'Chart.js', 'Bootstrap 5', 'Redis Cache', 'PostgreSQL'],
+                    github: 'https://github.com',
+                    demo: '#demo',
+                    slides: [
+                        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA7U5o23vPi0Ndnlcodf_lsXjRn9rUwZoPk3lJ5LVUUR8Qz6h-rA_St6pShVwwh36ZG7B_0EQB99uGLRcbMKf0SWgaQ8LSq8SMHs4KQIu4bfAqIJMmY7NflKUI5Um8p_MX53vX2sjVqSHUefVvdz0CBPMKUh5_s-jlHPAcT0BfYwDHa_jX0KLhu6pT-uKyPq9k3eSCF7b1mnOoMon9Z7leSjWudBncHOShnN-3GGZcfu3zVucvTmy4EkA', caption: 'Görünüm 1: Finansal ve Operasyonel KPI Dashboard Özeti' },
+                        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAffAeA6OWfUPVIH8fZMb36K4TDnjj3wzd-9TfzhowwNJ59hvst3psxFz89oxMP7_o6qEUkvqmfbLWFsr7VevRfpj03psK7xizl_wbuL9ya4JFFX1JzV0HhJ4k3rCEE0fzInowzEXsiqjZI6JcaYk1rFuH-I9XijQ1enbVqL6pkp9mozX26mRP4dj1rQMzWL9PwSTj748GtS7qC_d58dQa0bkhmiyrY66U1Q4w_um4wrThsePLudfbynw', caption: 'Görünüm 2: Filtrelenebilir Kullanıcı ve Şirket Yönetim Arayüzü' },
+                        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDzlMhGJ4GYpAnPLbOlwA-MjJbL15Pr9OQThhS-1tgM636VF1Nv0to7bx9RlwKjA1FyyWq8h37pJ_fc6ZOJHSnGOSxiWkZRaAiJwU4VDtFv74l3qxqAEqvNKDUFLA7BI8OSw7iOrr1C9PRLz-1rymzqSK8llbJgMlrr-31KDSTFUixmxZ_WKPJFL0I6_1Vk050qJ6PUvcmNc7Ku3_vyhwIqQh05rzycc8ipUxSILHINFaxkrW74AoDUw', caption: 'Görünüm 3: Anlık Satış ve Gelir Raporlama Çizelgeleri' }
+                    ]
+                },
+                '3': {
+                    title: 'API Tabanlı Web Uygulaması',
+                    category: 'Backend / Servis Mimarisi',
+                    date: '2024 • HIGH THROUGHPUT',
+                    problem: 'Yüksek eşzamanlı HTTP istekleri ve veri akışı altında güvenli, versiyonlanabilir ve mikroservis uyumlu bir RESTful API servis katmanı.',
+                    architecture: 'CQRS deseni ve MediatR ile decouple edilmiş kod tabanı. JWT Bearer token tabanlı kimlik doğrulama ve PostgreSQL desteği.',
+                    tags: ['ASP.NET Core Web API', 'PostgreSQL', 'CQRS & MediatR', 'JWT Auth', 'Swagger'],
+                    github: 'https://github.com',
+                    demo: '#demo',
+                    slides: [
+                        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCVed_TM4lFX7R0LAn95SznTUiekkQtC8Tuhqc9IwONIWypoDzkSZti0t_f2K2Kk-s0G2I-5CNLqD5FM3V5_nWmIXJSEiD1Rn0qC5iXzch8KqihZ-0-8NXBC9kvwKDMdrAK3MBl7dhdOQeMqjCStz1Dvq0e0Zc-4dTjTJDIg32HwnFexJUsG263o6-vaZ5x-bxXZjr05aMuAj1zS5PqcMuAZYt5A1FuNqg5WlM8cMjFabjvnHY7XfgSXA', caption: 'Görünüm 1: Swagger UI İnteraktif Endpoint Dokümantasyonu' },
+                        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDzlMhGJ4GYpAnPLbOlwA-MjJbL15Pr9OQThhS-1tgM636VF1Nv0to7bx9RlwKjA1FyyWq8h37pJ_fc6ZOJHSnGOSxiWkZRaAiJwU4VDtFv74l3qxqAEqvNKDUFLA7BI8OSw7iOrr1C9PRLz-1rymzqSK8llbJgMlrr-31KDSTFUixmxZ_WKPJFL0I6_1Vk050qJ6PUvcmNc7Ku3_vyhwIqQh05rzycc8ipUxSILHINFaxkrW74AoDUw', caption: 'Görünüm 2: JWT Yetkilendirme Testi ve Token Arayüzü' },
+                        { url: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAffAeA6OWfUPVIH8fZMb36K4TDnjj3wzd-9TfzhowwNJ59hvst3psxFz89oxMP7_o6qEUkvqmfbLWFsr7VevRfpj03psK7xizl_wbuL9ya4JFFX1JzV0HhJ4k3rCEE0fzInowzEXsiqjZI6JcaYk1rFuH-I9XijQ1enbVqL6pkp9mozX26mRP4dj1rQMzWL9PwSTj748GtS7qC_d58dQa0bkhmiyrY66U1Q4w_um4wrThsePLudfbynw', caption: 'Görünüm 3: Veritabanı Şeması ve Hata Yakalama Çıktıları' }
+                    ]
+                }
+            };
+
+            function updateSlider() {
+                sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                counterEl.textContent = `${currentSlide + 1} / ${slidesData.length}`;
+                captionEl.textContent = slidesData[currentSlide]?.caption || '';
+
+                // Update dots
+                sliderDots.querySelectorAll('.slider-dot').forEach((dot, idx) => {
+                    dot.className = `slider-dot h-2 rounded-full transition-all duration-300 cursor-pointer ${idx === currentSlide ? 'w-6 bg-primary' : 'w-2 bg-outline-variant'}`;
+                });
+            }
+
+            function openModal(projectId) {
+                const data = projects[projectId] || projects['1'];
+                slidesData = data.slides;
+                currentSlide = 0;
+
+                document.getElementById('modal-title').textContent = data.title;
+                document.getElementById('modal-category').textContent = data.category;
+                document.getElementById('modal-date').textContent = data.date;
+                document.getElementById('modal-problem').textContent = data.problem;
+                document.getElementById('modal-architecture').textContent = data.architecture;
+                document.getElementById('modal-github').href = data.github;
+                document.getElementById('modal-demo').href = data.demo;
+
+                // Render tags
+                const tagsContainer = document.getElementById('modal-tags');
+                tagsContainer.innerHTML = data.tags.map(t => `<span class="bg-surface-container px-2.5 py-1 rounded border border-surface-container-highest">${t}</span>`).join('');
+
+                // Render slides
+                sliderTrack.innerHTML = slidesData.map(s => `
+                                      <div class="h-full w-full flex-shrink-0 relative">
+                                        <img src="${s.url}" alt="${s.caption}" class="w-full h-full object-cover select-none" />
+                                      </div>
+                                    `).join('');
+
+                // Render dots
+                sliderDots.innerHTML = slidesData.map((_, idx) => `
+                                      <button type="button" aria-label="Görsel ${idx + 1}" data-index="${idx}" class="slider-dot h-2 rounded-full transition-all duration-300 cursor-pointer ${idx === 0 ? 'w-6 bg-primary' : 'w-2 bg-outline-variant'}"></button>
+                                    `).join('');
+
+                sliderDots.querySelectorAll('.slider-dot').forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        currentSlide = parseInt(dot.getAttribute('data-index'));
+                        updateSlider();
+                    });
+                });
+
+                updateSlider();
+
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.classList.add('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('.open-modal-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const pId = this.getAttribute('data-project');
+                    openModal(pId);
+                });
+            });
+
+            if (closeBtn) closeBtn.addEventListener('click', closeModal);
+            if (dismissBtn) dismissBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+            window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    currentSlide = (currentSlide - 1 + slidesData.length) % slidesData.length;
+                    updateSlider();
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    currentSlide = (currentSlide + 1) % slidesData.length;
+                    updateSlider();
+                });
+            }
+        })();
+</script>
+</body>
+</html>
