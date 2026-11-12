@@ -1,0 +1,62 @@
+﻿<style>
+    @@layer base {
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main > :first-child {
+            margin-top: 0 !important;
+        }
+
+        main > :last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    html.theme-transitioning, html.theme-transitioning * {
+        transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
+    }
+
+    :root {
+        --color-surface: #faf9f6;
+        --color-surface-container: #efeeeb;
+        --color-surface-container-low: #f4f3f0;
+        --color-surface-container-high: #e9e8e5;
+        --color-surface-container-highest: #e3e2df;
+        --color-surface-container-lowest: #ffffff;
+        --color-primary: #111618;
+        --color-primary-container: #252a2d;
+        --color-on-surface: #1a1c1a;
+        --color-on-surface-variant: #44474a;
+        --color-secondary: #5f5b77;
+        --color-secondary-container: #e2dbfd;
+        --color-tertiary-fixed: #d9e7d0;
+        --color-tertiary-fixed-dim: #bdcbb5;
+        --color-outline: #74777a;
+        --color-outline-variant: #c4c7c9;
+    }
+
+    html.dark {
+        --color-surface: #121314;
+        --color-surface-container: #1c1d1f;
+        --color-surface-container-low: #17181a;
+        --color-surface-container-high: #242528;
+        --color-surface-container-highest: #2d2e32;
+        --color-surface-container-lowest: #141517;
+        --color-primary: #f4f3f0;
+        --color-primary-container: #2a2b2f;
+        --color-on-surface: #f1f0ec;
+        --color-on-surface-variant: #a1a1aa;
+        --color-secondary: #a8a0d4;
+        --color-secondary-container: #2e2a44;
+        --color-tertiary-fixed: #243522;
+        --color-tertiary-fixed-dim: #5c7553;
+        --color-outline: #8e9094;
+        --color-outline-variant: #34363a;
+    }
+</style>
