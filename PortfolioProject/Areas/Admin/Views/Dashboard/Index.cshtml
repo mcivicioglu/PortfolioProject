@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<!-- ================= 00 / DASHBOARD SUMMARY SECTION ================= -->
+<section class="flex flex-col gap-6 pt-2" id="dashboard-top">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-2 border-b border-outline-variant/30">
+        <div class="flex flex-col max-w-3xl">
+            <div class="flex items-center gap-2 mb-1.5">
+                <span class="font-mono text-xs uppercase tracking-wider text-secondary font-semibold">00 / SİSTEM GENEL BAKIŞ</span>
+                <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                <span class="font-mono text-xs text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-full flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> DBSET REPOSITORY AKTİF
+                </span>
+            </div>
+            <h1 class="font-sans text-2xl sm:text-3xl font-extrabold tracking-tight text-primary">Portfolyo Yönetim &amp; Performans Paneli</h1>
+            <p class="font-body text-xs sm:text-sm text-on-surface-variant mt-1">Canlı portfolyo verileri, Entity Framework Core modelleri ve ana sayfanın tüm bölümleri tek ekrandan yönetilir.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+
+            <a class="flex items-center gap-1.5 px-3.5 py-2 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-xs font-sans font-semibold transition-colors shadow-xs" href="#sec-inbox">
+                <span class="material-symbols-outlined text-sm">mark_email_unread</span> Gelen Kutusu (38 Mesaj)
+            </a>
+        </div>
+    </div>
+    <!-- 4 KPI Metrics -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+        <!-- KART 1: PROJE SAYISI (Project.cs) -->
+        <div class="p-5 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col justify-between shadow-xs">
+            <div class="flex items-start justify-between">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-outline font-semibold">PROJE SAYISI (Project.cs)</span>
+                <span class="p-1.5 rounded-lg bg-surface-low text-secondary"><span class="material-symbols-outlined text-lg">folder_open</span></span>
+            </div>
+            <div class="my-3 flex items-baseline justify-between">
+                <span class="font-sans text-3xl font-bold text-primary">14 <span class="text-sm font-normal text-on-surface-variant">Toplam</span></span>
+                <span class="font-mono text-xs px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-semibold">+%12 Bu Çeyrek</span>
+            </div>
+            <div class="text-xs text-on-surface-variant flex items-center justify-between pt-2 border-t border-outline-variant/20 font-mono">
+                <span>8 Canlı Yayın</span><span class="font-bold text-primary">6 Arşiv &amp; Taslak</span>
+            </div>
+        </div>
+        <!-- KART 2: EĞİTİM & SERTİFİKA (Education & Certificate.cs) -->
+        <div class="p-5 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col justify-between shadow-xs">
+            <div class="flex items-start justify-between">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-outline font-semibold">EĞİTİM &amp; SERTİFİKA</span>
+                <span class="p-1.5 rounded-lg bg-surface-low text-secondary"><span class="material-symbols-outlined text-lg">workspace_premium</span></span>
+            </div>
+            <div class="my-3 flex items-baseline justify-between">
+                <span class="font-sans text-2xl font-bold text-primary">1 Derece &amp; 6 Sertifika</span>
+                <span class="font-mono text-[10px] px-1.5 py-0.5 rounded bg-surface-dim text-on-surface font-semibold">EF Sync</span>
+            </div>
+            <div class="text-xs text-on-surface-variant flex items-center justify-between pt-2 border-t border-outline-variant/20 font-mono">
+                <span>Doğrulama Durumu</span><span class="font-bold text-emerald-700">%100 Doğrulanabilir Link</span>
+            </div>
+        </div>
+        <!-- KART 3: GELEN MESAJLAR & ETKİLEŞİM (Contact.cs) with mini progress bar -->
+        <div class="p-5 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col justify-between shadow-xs">
+            <div class="flex items-start justify-between">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-outline font-semibold">GELEN MESAJLAR &amp; ETKİLEŞİM</span>
+                <span class="p-1.5 rounded-lg bg-secondary-container text-secondary"><span class="material-symbols-outlined text-lg">contact_mail</span></span>
+            </div>
+            <div class="my-2">
+                <div class="flex items-baseline justify-between">
+                    <span class="font-sans text-3xl font-bold text-primary">38 <span class="text-xs font-normal text-on-surface-variant">Mesaj</span></span>
+                    <span class="font-mono text-xs px-2 py-0.5 rounded bg-error-container text-error font-semibold animate-pulse">2 Yanıt Bekleyen</span>
+                </div>
+                <!-- Mini progress representation -->
+                <div class="w-full bg-surface-dim h-2 rounded-full mt-2.5 overflow-hidden flex">
+                    <div class="bg-primary h-full" style="width: 68%;" title="26 Okundu"></div>
+                    <div class="bg-secondary h-full" style="width: 26%;" title="10 Yanıtlandı"></div>
+                    <div class="bg-error h-full" style="width: 6%;" title="2 Bekleyen"></div>
+                </div>
+            </div>
+            <div class="text-[11px] text-on-surface-variant flex items-center justify-between pt-2 border-t border-outline-variant/20 font-mono">
+                <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary inline-block"></span> 26 Okundu</span>
+                <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary inline-block"></span> 10 Yanıtlandı</span>
+            </div>
+        </div>
+        <!-- KART 4: CV VE GITHUB DÖNÜŞÜM -->
+        <div class="p-5 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col justify-between shadow-xs">
+            <div class="flex items-start justify-between">
+                <span class="font-mono text-[11px] uppercase tracking-wider text-outline font-semibold">CV &amp; GITHUB DÖNÜŞÜM</span>
+                <span class="p-1.5 rounded-lg bg-surface-low text-secondary"><span class="material-symbols-outlined text-lg">download</span></span>
+            </div>
+            <div class="my-3 flex items-baseline justify-between">
+                <span class="font-sans text-3xl font-bold text-primary">342</span>
+                <span class="font-mono text-xs px-2 py-0.5 rounded bg-surface-dim text-on-surface font-semibold">PDF İndirme</span>
+            </div>
+            <div class="text-xs text-on-surface-variant flex items-center justify-between pt-2 border-t border-outline-variant/20 font-mono">
+                <span>GitHub Tıklama</span><span class="font-bold text-primary">890 tık</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================= SECTION EDITORS HEADER ================= -->
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/30">
+    <div class="flex flex-col">
+        <div class="flex items-center gap-2">
+            <span class="font-mono text-xs uppercase tracking-wider text-secondary font-bold">ANA SAYFA BÖLÜM EDİTÖRLERİ</span>
+            <span class="font-mono text-[11px] px-2 py-0.5 bg-primary text-on-primary rounded font-semibold">10 AKTİF MODÜL SIRALANDI</span>
+        </div>
+        <h2 class="font-sans text-xl sm:text-2xl font-bold text-primary mt-1">Canlı Portfolyo İçerik ve Varlık Düzenleyicileri</h2>
+        <p class="font-body text-xs text-on-surface-variant">Ana sayfadaki sırayla listelenen tüm C# Entity Framework modellerini doğrudan buradan düzenleyebilirsiniz.</p>
+    </div>
+</div>

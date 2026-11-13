@@ -1,0 +1,876 @@
+﻿@{
+    ViewData["Title"] = "ExperienceList";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<!-- ================= 05 / EXPERIENCE SECTION (Experience.cs) ================= -->
+<section class="p-6 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col gap-6 shadow-xs scroll-mt-20" id="sec-experience">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+        <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-mono text-xs font-bold">05</span>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs uppercase tracking-wider text-secondary font-bold">DENEYİM &amp; KARİYER</span>
+
+                </div>
+                <h3 class="font-sans text-lg font-bold text-primary">Kronolojik Kariyer &amp; Rol Yönetimi</h3>
+            </div>
+        </div>
+        <button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-xs font-sans font-semibold flex items-center gap-1.5 transition-colors shadow-xs">
+            <span class="material-symbols-outlined text-sm">save</span> Deneyimleri Kaydet
+        </button>
+    </div>
+    <div class="flex flex-col gap-3">
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-2 flex-wrap">
+                    <span class="font-sans font-bold text-sm text-primary">Kıdemli Yazılım Geliştirici</span>
+                    <span class="text-xs text-on-surface-variant font-medium">• Atelier Digital Solutions / İstanbul</span>
+                    <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">Tam Zamanlı • Hibrit</span>
+                </div>
+                <p class="font-body text-xs text-on-surface-variant mt-1">Mikroservis mimarisinde .NET Core servislerinin tasarımı, veri tabanı optimizasyonları ve yüksek yüklü kurumsal web arayüzlerinin geliştirilmesi.</p>
+                <div class="flex items-center gap-2 mt-2 font-mono text-[11px] text-secondary">
+                    <span>.NET 8</span><span>•</span><span>Clean Architecture</span><span>•</span><span>MS SQL</span><span>•</span><span>RabbitMQ</span>
+                </div>
+            </div>
+            <div class="flex md:flex-col items-center md:items-end justify-between shrink-0 gap-1 font-mono text-xs">
+                <span class="font-bold text-primary">2022 — GÜNÜMÜZ</span>
+                <button class="text-xs text-secondary hover:text-primary font-medium">Düzenle</button>
+            </div>
+        </div>
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-2 flex-wrap">
+                    <span class="font-sans font-bold text-sm text-primary">Full Stack .NET Developer</span>
+                    <span class="text-xs text-on-surface-variant font-medium">• Nova Bilişim Teknolojileri</span>
+                    <span class="font-mono text-[10px] px-2 py-0.5 rounded bg-surface-dim text-on-surface font-bold">Tam Zamanlı</span>
+                </div>
+                <p class="font-body text-xs text-on-surface-variant mt-1">B2B ve B2C e-ticaret panellerinin backend API entegrasyonları, responsive ön yüz bileşenleri ve SQL Server optimizasyonları.</p>
+                <div class="flex items-center gap-2 mt-2 font-mono text-[11px] text-secondary">
+                    <span>ASP.NET MVC</span><span>•</span><span>C#</span><span>•</span><span>JavaScript</span><span>•</span><span>Bootstrap</span>
+                </div>
+            </div>
+            <div class="flex md:flex-col items-center md:items-end justify-between shrink-0 gap-1 font-mono text-xs">
+                <span class="text-outline">2020 — 2022</span>
+                <button class="text-xs text-secondary hover:text-primary font-medium">Düzenle</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= 01 / HERO SECTION (HeroSection.cs) ================= -->
+<section class="p-6 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col gap-6 shadow-xs scroll-mt-20" id="sec-hero">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+        <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-mono text-xs font-bold">01</span>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs uppercase tracking-wider text-secondary font-bold">HERO BÖLÜMÜ</span>
+
+                </div>
+                <h3 class="font-sans text-lg font-bold text-primary">Hero Başlık, Unvan, Portre &amp; Terminal Profili</h3>
+            </div>
+        </div>
+        <div class="flex items-center gap-2">
+            <button class="px-3 py-1.5 bg-surface-low hover:bg-surface-dim rounded-lg text-xs font-mono text-on-surface flex items-center gap-1 transition-colors">
+                <span class="material-symbols-outlined text-sm">visibility</span> Canlıda Gör
+            </button>
+            <button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-xs font-sans font-semibold flex items-center gap-1.5 transition-colors shadow-xs">
+                <span class="material-symbols-outlined text-sm">save</span> Hero Güncelle
+            </button>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div class="lg:col-span-7 flex flex-col gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex flex-col gap-1.5">
+                    <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Karşılama Etiketi</label>
+                    <input class="px-3 py-2 bg-surface-low border border-outline-variant/40 rounded-lg text-xs font-body text-primary focus:outline-none focus:border-primary" type="text" value="Available for Senior Architecture Roles">
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Unvan &amp; Rol</label>
+                    <input class="px-3 py-2 bg-surface-low border border-outline-variant/40 rounded-lg text-xs font-body text-primary focus:outline-none focus:border-primary" type="text" value="Lead Software Architect • .NET &amp; Cloud">
+                </div>
+            </div>
+            <div class="flex flex-col gap-1.5">
+                <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Ana Başlık</label>
+                <input class="px-3 py-2 bg-surface-low border border-outline-variant/40 rounded-lg text-sm font-sans font-bold text-primary focus:outline-none focus:border-primary" type="text" value="Kusursuz Mimari, Zarif Kod ve Sürdürülebilir Sistemler">
+            </div>
+            <div class="flex flex-col gap-1.5">
+                <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Hero Biyografi Paragrafı</label>
+                <textarea class="px-3 py-2 bg-surface-low border border-outline-variant/40 rounded-lg text-xs font-body text-primary focus:outline-none focus:border-primary min-h-[80px]" rows="3">Enterprise ölçekte .NET Core, mikroservis mimarileri ve yüksek erişilebilirlikli dağıtık sistemler inşa eden kıdemli yazılım mimarı. Performans odaklı, temiz ve tip güvenli çözümler tasarlarım.</textarea>
+            </div>
+        </div>
+        <div class="lg:col-span-5 flex flex-col gap-4">
+            <!-- Hero Image Preview & Integrated Upload Dropzone -->
+            <div class="p-3.5 bg-surface-low rounded-xl border border-outline-variant/30 flex flex-col gap-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <img alt="Hero Portrait" class="w-14 h-14 rounded-lg object-cover border border-outline-variant/40 shadow-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMlKEZpnB4CRXuU6bVh19KEmvOTuff-2xF74WpC0wg1yZaNR0QZkwaeDq-wcGk2sUSwk9jS_JbIIz1eiNi6jMk25nqkdTUJYBY-NLx9BBLqTWGP_v7koMyhKsGc3Fu9d1Qcc8o-NQfVCJY6kZfyMqvleBaWblIbe47VESV_5JxQ2u4EeRMlI-AGkAIedOvomq71wnqf22l3hX4RRD6BaYWUwY5LnQDIP9OgGPJfRLNRKMZHSO6Imzs5Q">
+                        <div class="flex flex-col">
+                            <span class="font-mono text-xs font-bold text-primary">Hero_Portrait.png</span>
+                            <span class="font-mono text-[11px] text-outline">1254x1254 • Aktif</span>
+                            <span class="font-mono text-[11px] text-emerald-700 font-semibold">Yayında</span>
+                        </div>
+                    </div>
+                    <button class="px-2.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded text-xs font-sans font-semibold flex items-center gap-1 transition-colors">
+                        <span class="material-symbols-outlined text-xs">upload_file</span> Yeni Görsel Yükle
+                    </button>
+                </div>
+                <!-- Upload Dropzone / File Picker -->
+                <div class="border-2 border-dashed border-outline-variant/60 hover:border-primary rounded-lg p-3 bg-surface-card flex flex-col items-center justify-center text-center cursor-pointer transition-colors group">
+                    <span class="material-symbols-outlined text-2xl text-secondary group-hover:text-primary transition-colors">cloud_upload</span>
+                    <p class="font-sans text-xs font-semibold text-primary mt-1">Görsel Sürükleyin veya Dosya Seçin</p>
+                    <p class="font-mono text-[10px] text-outline mt-0.5">PNG, JPG, WEBP (Maksimum 5MB) • 1:1 veya Portre Önerilir</p>
+                </div>
+            </div>
+            <!-- Terminal DeveloperProfile.cs Editor -->
+            <div class="flex flex-col gap-1.5">
+                <div class="flex items-center justify-between">
+                    <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold flex items-center gap-1">
+                        <span class="material-symbols-outlined text-xs">terminal</span> Terminal Profili&nbsp;
+                    </label>
+                    <span class="font-mono text-[10px] text-outline">C# Record</span>
+                </div>
+                <textarea class="font-mono text-xs leading-relaxed p-3 bg-primary-container text-surface-low rounded-lg border border-outline-variant/30 focus:outline-none focus:border-secondary h-32" rows="5" placeholder="public record DeveloperProfile {
+                public string Name { get; init; } = &quot;Mahmut&quot;;
+                public string Role { get; init; } = &quot;Junior .NET Developer&quot;;
+                public string Focus { get; init; } = &quot;.NET 8 &amp; Cloud Native&quot;;
+                public bool OpenToWork { get; init; } = true;
+                }">public record DeveloperProfile {
+                public string Name { get; init; } = "Mahmut";
+                public string Role { get; init; } = "Lead Software Architect";
+                public string Focus { get; init; } = ".NET 8 &amp; Cloud Native";
+                public bool OpenToWork { get; init; } = true;
+                }</textarea>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================= 02 / ABOUT SECTION (About.cs) ================= -->
+<section class="p-6 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col gap-6 shadow-xs scroll-mt-20" id="sec-about">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+        <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-mono text-xs font-bold">02</span>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs uppercase tracking-wider text-secondary font-bold">HAKKIMDA &amp; BİYOGRAFİ</span>
+
+                </div>
+                <h3 class="font-sans text-lg font-bold text-primary">Manifesto Alıntısı, Biyografi &amp; Editoryal Portre</h3>
+            </div>
+        </div>
+        <button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-xs font-sans font-semibold flex items-center gap-1.5 transition-colors shadow-xs">
+            <span class="material-symbols-outlined text-sm">save</span> Biyografiyi Kaydet
+        </button>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div class="lg:col-span-8 flex flex-col gap-4">
+            <div class="flex flex-col gap-1.5">
+                <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Manifesto / Vurgu Alıntısı</label>
+                <input class="px-3 py-2 bg-surface-low border border-outline-variant/40 rounded-lg text-sm font-body italic text-primary focus:outline-none focus:border-primary" type="text" value="&quot;Fikirleri çalışan dijital ürünlere dönüştürüyorum. Temiz kod ve sürdürülebilir mimari.&quot;">
+            </div>
+            <div class="flex flex-col gap-1.5">
+                <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Detaylı Biyografi</label>
+                <textarea class="px-3 py-2 bg-surface-low border border-outline-variant/40 rounded-lg text-xs font-body text-primary focus:outline-none focus:border-primary min-h-[90px]" rows="3">6 yılı aşkın süredir modern yazılım ekosistemlerinde büyük ölçekli kurumsal uygulamalar, dağıtık mikroservis altyapıları ve bulut yerel çözümler geliştiriyorum. DDD ve Clean Architecture prensiplerini tavizsiz uygulayarak bakım maliyetlerini düşürürüm.</textarea>
+            </div>
+            <!-- Quick Metrics Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+                <div class="p-2.5 bg-surface-low rounded-lg flex flex-col gap-0.5">
+                    <label class="font-mono text-[10px] text-outline uppercase font-semibold">Konum</label>
+                    <input class="bg-transparent font-sans text-xs font-bold text-primary focus:outline-none" type="text" value="İzmir, Türkiye">
+                </div>
+                <div class="p-2.5 bg-surface-low rounded-lg flex flex-col gap-0.5">
+                    <label class="font-mono text-[10px] text-outline uppercase font-semibold">Uzmanlık</label>
+                    <input class="bg-transparent font-sans text-xs font-bold text-primary focus:outline-none" type="text" value="Full Stack .NET">
+                </div>
+                <div class="p-2.5 bg-surface-low rounded-lg flex flex-col gap-0.5">
+                    <label class="font-mono text-[10px] text-outline uppercase font-semibold">Odak Alanı</label>
+                    <input class="bg-transparent font-sans text-xs font-bold text-primary focus:outline-none" type="text" value="Cloud &amp; DDD">
+                </div>
+                <div class="p-2.5 bg-surface-low rounded-lg flex flex-col gap-0.5">
+                    <label class="font-mono text-[10px] text-outline uppercase font-semibold">Yaklaşım</label>
+                    <input class="bg-transparent font-sans text-xs font-bold text-primary focus:outline-none" type="text" value="Clean Code &amp; UX">
+                </div>
+            </div>
+            <!-- DATABASE HISTORY & PREVIOUS REVISIONS LIST -->
+            <div class="mt-2 p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex flex-col gap-3">
+                <div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm text-secondary">history</span>
+                        <span class="font-mono text-xs uppercase tracking-wider text-primary font-bold">Veritabanı Geçmişi (Previous Revisions)</span>
+                    </div>
+                    <span class="font-mono text-[11px] text-outline">3 Kayıt Bulundu</span>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <!-- Revision 1 (Active) -->
+                    <div class="p-2.5 bg-surface-card rounded-lg border border-primary/40 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <input checked="" class="w-4 h-4 text-primary accent-primary focus:ring-0 cursor-pointer" id="rev-v24" name="about_active_revision" type="radio">
+                            <label class="flex flex-col cursor-pointer" for="rev-v24">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-sans font-bold text-xs text-primary">v2.4 - Aktif (Canlı)</span>
+                                    <span class="px-1.5 py-0.2 bg-emerald-100 text-emerald-800 rounded font-mono text-[10px] font-bold">Sitede Yayında</span>
+                                </div>
+                                <span class="font-mono text-[11px] text-outline">Güncellenme: 14 Ocak 2025 • Lead Software Architect odaklı revizyon</span>
+                            </label>
+                        </div>
+                        <span class="font-mono text-[11px] text-emerald-700 font-bold">Aktif Olarak Atandı</span>
+                    </div>
+                    <!-- Revision 2 -->
+                    <div class="p-2.5 bg-surface-card/60 hover:bg-surface-card rounded-lg border border-outline-variant/30 flex items-center justify-between gap-3 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <input class="w-4 h-4 text-primary accent-primary focus:ring-0 cursor-pointer" id="rev-v21" name="about_active_revision" type="radio">
+                            <label class="flex flex-col cursor-pointer" for="rev-v21">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-sans font-medium text-xs text-primary">v2.1 - 12 Ekim 2023</span>
+                                    <span class="px-1.5 py-0.2 bg-surface-dim text-on-surface-variant rounded font-mono text-[10px]">Arşiv</span>
+                                </div>
+                                <span class="font-mono text-[11px] text-outline">Kıdemli Full Stack .NET Developer &amp; Microservices manifestosu</span>
+                            </label>
+                        </div>
+                        <button class="px-2.5 py-1 bg-surface-low hover:bg-surface-dim rounded text-xs font-mono text-primary border border-outline-variant/30">Bu Versiyonu Etkinleştir</button>
+                    </div>
+                    <!-- Revision 3 -->
+                    <div class="p-2.5 bg-surface-card/60 hover:bg-surface-card rounded-lg border border-outline-variant/30 flex items-center justify-between gap-3 transition-colors">
+                        <div class="flex items-center gap-3">
+                            <input class="w-4 h-4 text-primary accent-primary focus:ring-0 cursor-pointer" id="rev-v18" name="about_active_revision" type="radio">
+                            <label class="flex flex-col cursor-pointer" for="rev-v18">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-sans font-medium text-xs text-primary">v1.8 - 4 Mayıs 2023</span>
+                                    <span class="px-1.5 py-0.2 bg-surface-dim text-on-surface-variant rounded font-mono text-[10px]">Eski Versiyon</span>
+                                </div>
+                                <span class="font-mono text-[11px] text-outline">İlk .NET Core kurumsal portfolyo biyografisi</span>
+                            </label>
+                        </div>
+                        <button class="px-2.5 py-1 bg-surface-low hover:bg-surface-dim rounded text-xs font-mono text-primary border border-outline-variant/30">Bu Versiyonu Etkinleştir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Editorial Portrait Preview -->
+        <div class="lg:col-span-4 flex flex-col gap-3">
+            <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Hakkımda Portre Görseli</label>
+            <div class="rounded-xl overflow-hidden bg-surface-low border border-outline-variant/30 p-3 flex flex-col items-center">
+                <img alt="About Studio" class="w-full h-44 object-cover rounded-lg shadow-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMlKEZpnB4CRXuU6bVh19KEmvOTuff-2xF74WpC0wg1yZaNR0QZkwaeDq-wcGk2sUSwk9jS_JbIIz1eiNi6jMk25nqkdTUJYBY-NLx9BBLqTWGP_v7koMyhKsGc3Fu9d1Qcc8o-NQfVCJY6kZfyMqvleBaWblIbe47VESV_5JxQ2u4EeRMlI-AGkAIedOvomq71wnqf22l3hX4RRD6BaYWUwY5LnQDIP9OgGPJfRLNRKMZHSO6Imzs5Q">
+                <div class="w-full flex items-center justify-between pt-2">
+
+                    <button class="font-mono text-xs text-primary font-bold hover:underline">Görsel Yükle</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================= 03 / SKILL & SKILL ITEM (Skill.cs & SkillItem.cs) ================= -->
+<section class="p-6 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col gap-6 shadow-xs scroll-mt-20" id="sec-skills">
+    "
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+        <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-mono text-xs font-bold">03</span>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs uppercase tracking-wider text-secondary font-bold">YETENEKLER &amp; TEKNOLOJİ YIĞINI</span>
+
+                </div>
+                <h3 class="font-sans text-lg font-bold text-primary">Kategori ve Seviye İlerleme Barları (Progress Bars)</h3>
+            </div>
+        </div>
+        <div class="flex items-center gap-2">
+            <button class="px-3 py-1.5 bg-surface-low hover:bg-surface-dim rounded-lg text-xs font-mono text-on-surface flex items-center gap-1 transition-colors">
+                <span class="material-symbols-outlined text-sm">add</span> Yeni Kategori
+            </button>
+            <button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-xs font-sans font-semibold flex items-center gap-1.5 transition-colors shadow-xs">
+                <span class="material-symbols-outlined text-sm">save</span> Yetenekleri Kaydet
+            </button>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Category 1: Backend Development -->
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex flex-col gap-3.5">
+            <div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+                <div class="flex items-center gap-2 font-sans font-bold text-sm text-primary">
+                    <span class="w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center font-mono text-xs">B</span>
+                    Backend Development
+                </div>
+                <button class="text-xs font-mono text-secondary hover:text-primary font-semibold">+ Teknoloji Ekle</button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">C# / .NET 8</span>
+                        <span class="text-emerald-700 font-bold">%95</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-primary h-full rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">ASP.NET Core</span>
+                        <span class="text-emerald-700 font-bold">%92</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-primary h-full rounded-full" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">EF Core</span>
+                        <span class="text-emerald-700 font-bold">%90</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-primary h-full rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">RESTful APIs</span>
+                        <span class="text-emerald-700 font-bold">%88</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category 2: Frontend Development -->
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex flex-col gap-3.5">
+            <div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+                <div class="flex items-center gap-2 font-sans font-bold text-sm text-primary">
+                    <span class="w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center font-mono text-xs">F</span>
+                    Frontend Development
+                </div>
+                <button class="text-xs font-mono text-secondary hover:text-primary font-semibold">+ Teknoloji Ekle</button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">Tailwind CSS</span>
+                        <span class="text-emerald-700 font-bold">%92</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-secondary h-full rounded-full" style="width: 92%"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">JavaScript ES6+ / TypeScript</span>
+                        <span class="text-emerald-700 font-bold">%90</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-secondary h-full rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">HTML5 / Modern Semantics</span>
+                        <span class="text-emerald-700 font-bold">%95</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-secondary h-full rounded-full" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">Bootstrap 5</span>
+                        <span class="text-emerald-700 font-bold">%88</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-secondary h-full rounded-full" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category 3: Veritabanı & Depolama -->
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex flex-col gap-3.5">
+            <div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+                <div class="flex items-center gap-2 font-sans font-bold text-sm text-primary">
+                    <span class="w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center font-mono text-xs">V</span>
+                    Veritabanı &amp; Depolama
+                </div>
+                <button class="text-xs font-mono text-secondary hover:text-primary font-semibold">+ Teknoloji Ekle</button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">PostgreSQL</span>
+                        <span class="text-emerald-700 font-bold">%90</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-tertiary h-full rounded-full" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">MS SQL Server</span>
+                        <span class="text-emerald-700 font-bold">%88</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-tertiary h-full rounded-full" style="width: 88%"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">Redis Cache</span>
+                        <span class="text-emerald-700 font-bold">%85</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-tertiary h-full rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Category 4: Araçlar & Mimari Disiplini -->
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex flex-col gap-3.5">
+            <div class="flex items-center justify-between pb-2 border-b border-outline-variant/20">
+                <div class="flex items-center gap-2 font-sans font-bold text-sm text-primary">
+                    <span class="w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center font-mono text-xs">A</span>
+                    Araçlar &amp; Mimari Disiplini
+                </div>
+                <button class="text-xs font-mono text-secondary hover:text-primary font-semibold">+ Teknoloji Ekle</button>
+            </div>
+            <div class="flex flex-col gap-3">
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">Clean Architecture</span>
+                        <span class="text-emerald-700 font-bold">%94</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-primary h-full rounded-full" style="width: 94%"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">Docker &amp; Kubernetes</span>
+                        <span class="text-emerald-700 font-bold">%85</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-primary h-full rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div class="flex justify-between items-center text-xs font-mono">
+                        <span class="font-semibold text-primary">CQRS &amp; MediatR</span>
+                        <span class="text-emerald-700 font-bold">%88</span>
+                    </div>
+                    <div class="w-full bg-surface-high h-2 rounded-full overflow-hidden">
+                        <div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================= 04 / PROJECTS SECTION (Project.cs) ================= -->
+<section class="p-6 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col gap-6 shadow-xs scroll-mt-20" id="sec-projects">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+        <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-mono text-xs font-bold">04</span>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs uppercase tracking-wider text-secondary font-bold">PROJELER &amp; PORTFOLYO</span>
+
+                </div>
+                <h3 class="font-sans text-lg font-bold text-primary">Proje Listesi, Detay &amp; Medya Düzenleyici</h3>
+            </div>
+        </div>
+        <div class="flex items-center gap-2">
+            <button class="px-3 py-1.5 bg-surface-low hover:bg-surface-dim rounded-lg text-xs font-mono text-on-surface flex items-center gap-1 transition-colors">
+                <span class="material-symbols-outlined text-sm">add_box</span> Yeni Proje Ekle
+            </button>
+            <button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-xs font-sans font-semibold flex items-center gap-1.5 transition-colors shadow-xs">
+                <span class="material-symbols-outlined text-sm">save</span> Projeleri Kaydet
+            </button>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div class="lg:col-span-4 flex flex-col gap-2">
+            <span class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Kayıtlı Projeler (3 Aktif / 14 Toplam)</span>
+            <div class="p-3 bg-surface-low rounded-lg border-2 border-primary flex items-center justify-between cursor-pointer">
+                <div class="flex flex-col min-w-0">
+                    <span class="font-sans text-xs font-bold text-primary truncate">Arıza ve Bakım Yönetim Sis.</span>
+                    <span class="font-mono text-[11px] text-secondary">Web Uygulaması • 2024</span>
+                </div>
+                <span class="font-mono text-[10px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-bold">Featured</span>
+            </div>
+            <div class="p-3 bg-surface-low hover:bg-surface-dim rounded-lg border border-outline-variant/30 flex items-center justify-between cursor-pointer transition-colors">
+                <div class="flex flex-col min-w-0">
+                    <span class="font-sans text-xs font-semibold text-primary truncate">Kurumsal Yönetim Paneli</span>
+                    <span class="font-mono text-[11px] text-outline">Dashboard • 2023</span>
+                </div>
+                <span class="font-mono text-[10px] text-outline">Aktif</span>
+            </div>
+            <div class="p-3 bg-surface-low hover:bg-surface-dim rounded-lg border border-outline-variant/30 flex items-center justify-between cursor-pointer transition-colors">
+                <div class="flex flex-col min-w-0">
+                    <span class="font-sans text-xs font-semibold text-primary truncate">API Tabanlı Web Uygulaması</span>
+                    <span class="font-mono text-[11px] text-outline">Backend / API • 2024</span>
+                </div>
+                <span class="font-mono text-[10px] text-outline">Aktif</span>
+            </div>
+        </div>
+        <div class="lg:col-span-8 flex flex-col gap-4 bg-surface-low p-4 rounded-xl border border-outline-variant/30">
+            <!-- Project Image / Thumbnail Upload Dropzone -->
+            <div class="flex flex-col gap-1.5">
+                <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Proje Kapak Görseli (16:9 Mockup / Thumbnail)</label>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-center p-3 bg-surface-card rounded-lg border border-outline-variant/40">
+                    <!-- Thumbnail Preview -->
+                    <div class="md:col-span-4 relative rounded-md overflow-hidden bg-surface-dim border border-outline-variant/30 aspect-video flex items-center justify-center group">
+                        <img alt="Project Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMlKEZpnB4CRXuU6bVh19KEmvOTuff-2xF74WpC0wg1yZaNR0QZkwaeDq-wcGk2sUSwk9jS_JbIIz1eiNi6jMk25nqkdTUJYBY-NLx9BBLqTWGP_v7koMyhKsGc3Fu9d1Qcc8o-NQfVCJY6kZfyMqvleBaWblIbe47VESV_5JxQ2u4EeRMlI-AGkAIedOvomq71wnqf22l3hX4RRD6BaYWUwY5LnQDIP9OgGPJfRLNRKMZHSO6Imzs5Q">
+                        <span class="absolute bottom-1 right-1 font-mono text-[10px] bg-primary/80 text-on-primary px-1 rounded">1920x1080</span>
+                    </div>
+                    <!-- Dropzone Area -->
+                    <div class="md:col-span-8 border-2 border-dashed border-outline-variant/60 hover:border-primary rounded-md p-3 flex flex-col items-center justify-center text-center cursor-pointer transition-colors group">
+                        <span class="material-symbols-outlined text-xl text-secondary group-hover:text-primary transition-colors">add_photo_alternate</span>
+                        <p class="font-sans text-xs font-semibold text-primary mt-1">Kapak Görseli Yükle (16:9)</p>
+                        <p class="font-mono text-[10px] text-outline">Görsel Seç / Değiştir veya buraya bırakın • PNG, JPG, WebP</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex flex-col gap-1.5">
+                    <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Proje Başlığı</label>
+                    <input class="px-3 py-2 bg-surface-card border border-outline-variant/40 rounded-lg text-xs font-sans font-bold text-primary focus:outline-none focus:border-primary" type="text" value="Arıza ve Bakım Yönetim Sistemi">
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Kategori Filtresi</label>
+                    <select class="px-3 py-2 bg-surface-card border border-outline-variant/40 rounded-lg text-xs font-sans text-primary focus:outline-none focus:border-primary">
+                        <option selected="">Web Uygulamaları</option>
+                        <option>Backend / API</option>
+                        <option>Dashboard</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex flex-col gap-1.5">
+                <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Proje Açıklaması</label>
+                <textarea class="px-3 py-2 bg-surface-card border border-outline-variant/40 rounded-lg text-xs font-body text-primary focus:outline-none focus:border-primary min-h-[70px]" rows="2">Kurumsal işletmelerde arıza bildirimlerini, görev atamalarını ve periyodik bakım süreçlerini yönetmeye yönelik web tabanlı uçtan uca otomasyon çözümü.</textarea>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex flex-col gap-1.5">
+                    <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Canlı Demo URL</label>
+                    <input class="px-3 py-2 bg-surface-card border border-outline-variant/40 rounded-lg text-xs font-mono text-primary focus:outline-none focus:border-primary" type="url" value="https://demo.atelierdss.com/fault-mgmt">
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">GitHub Repository URL</label>
+                    <input class="px-3 py-2 bg-surface-card border border-outline-variant/40 rounded-lg text-xs font-mono text-primary focus:outline-none focus:border-primary" type="url" value="https://github.com/mcivicioglu/maintenance-core">
+                </div>
+            </div>
+            <div class="flex flex-col gap-1.5">
+                <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Teknoloji Çipleri (Etiketler)</label>
+                <input class="px-3 py-2 bg-surface-card border border-outline-variant/40 rounded-lg text-xs font-mono text-primary focus:outline-none focus:border-primary" type="text" value="ASP.NET Core, SQL Server, Bootstrap 5, JavaScript">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================= 06 / EDUCATION (Education.cs) ================= -->
+<section class="p-6 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col gap-6 shadow-xs scroll-mt-20" id="sec-education">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+        <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-mono text-xs font-bold">06</span>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs uppercase tracking-wider text-secondary font-bold">EĞİTİM &amp; AKADEMİK</span>
+
+                </div>
+                <h3 class="font-sans text-lg font-bold text-primary">Üniversite, Bölüm ve Akademik Tezi Düzenleme</h3>
+            </div>
+        </div>
+        <button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-xs font-sans font-semibold flex items-center gap-1.5 transition-colors shadow-xs">
+            <span class="material-symbols-outlined text-sm">save</span> Eğitimi Kaydet
+        </button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-surface-low p-4 rounded-xl border border-outline-variant/30">
+        <div class="flex flex-col gap-1.5">
+            <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Kurum / Üniversite</label>
+            <input class="px-3 py-2 bg-surface-card border border-outline-variant/40 rounded-lg text-xs font-sans font-bold text-primary focus:outline-none focus:border-primary" type="text" value="İstanbul Teknik Üniversitesi">
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Derece &amp; Bölüm</label>
+            <input class="px-3 py-2 bg-surface-card border border-outline-variant/40 rounded-lg text-xs font-sans text-primary focus:outline-none focus:border-primary" type="text" value="Bilgisayar Mühendisliği (Lisans)">
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Mezuniyet Yılı</label>
+            <input class="px-3 py-2 bg-surface-card border border-outline-variant/40 rounded-lg text-xs font-mono text-primary focus:outline-none focus:border-primary" type="text" value="2016 — 2020">
+        </div>
+        <div class="md:col-span-3 flex flex-col gap-1.5">
+            <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Bitirme Tezi &amp; Müfredat Kapsamı</label>
+            <textarea class="px-3 py-2 bg-surface-card border border-outline-variant/40 rounded-lg text-xs font-body text-primary focus:outline-none focus:border-primary" rows="2">Yazılım mühendisliği temelleri, veri yapıları ve algoritmalar. Dağıtık sistemler ve asenkron mikroservis mimarisi üzerine akademik bitirme projesi.</textarea>
+        </div>
+    </div>
+</section>
+<!-- ================= 07 / CERTIFICATE (Certificate.cs) ================= -->
+<section class="p-6 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col gap-6 shadow-xs scroll-mt-20" id="sec-certificates">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+        <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-mono text-xs font-bold">07</span>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs uppercase tracking-wider text-secondary font-bold">SERTİFİKALAR &amp; AKREDİTASYONLAR</span>
+
+                </div>
+                <h3 class="font-sans text-lg font-bold text-primary">Sertifika &amp; Dış Doğrulama Bağlantıları Yönetimi</h3>
+            </div>
+        </div>
+        <button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-xs font-sans font-semibold flex items-center gap-1.5 transition-colors shadow-xs">
+            <span class="material-symbols-outlined text-sm">save</span> Sertifikaları Kaydet
+        </button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-lg bg-surface-card border border-outline-variant/30 flex items-center justify-center font-mono font-bold text-xs text-primary">MS</span>
+                <div class="flex flex-col">
+                    <span class="font-sans font-bold text-xs text-primary">ASP.NET Core Enterprise Architecture</span>
+                    <span class="font-mono text-[11px] text-on-surface-variant">Microsoft • 2023 • Doğrulanabilir</span>
+                </div>
+            </div>
+            <button class="text-xs font-mono text-secondary hover:text-primary font-bold">Düzenle</button>
+        </div>
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-lg bg-surface-card border border-outline-variant/30 flex items-center justify-center font-mono font-bold text-xs text-primary">SO</span>
+                <div class="flex flex-col">
+                    <span class="font-sans font-bold text-xs text-primary">Professional Scrum Developer (PSD I)</span>
+                    <span class="font-mono text-[11px] text-on-surface-variant">Scrum.org • 2023 • Doğrulanabilir</span>
+                </div>
+            </div>
+            <button class="text-xs font-mono text-secondary hover:text-primary font-bold">Düzenle</button>
+        </div>
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-lg bg-surface-card border border-outline-variant/30 flex items-center justify-center font-mono font-bold text-xs text-primary">UD</span>
+                <div class="flex flex-col">
+                    <span class="font-sans font-bold text-xs text-primary">Design Patterns in C# &amp; .NET</span>
+                    <span class="font-mono text-[11px] text-on-surface-variant">Udemy / K.G. • 2022 • Doğrulanabilir</span>
+                </div>
+            </div>
+            <button class="text-xs font-mono text-secondary hover:text-primary font-bold">Düzenle</button>
+        </div>
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-lg bg-surface-card border border-outline-variant/30 flex items-center justify-center font-mono font-bold text-xs text-primary">PM</span>
+                <div class="flex flex-col">
+                    <span class="font-sans font-bold text-xs text-primary">API Network Student Expert</span>
+                    <span class="font-mono text-[11px] text-on-surface-variant">Postman • 2021 • Doğrulanabilir</span>
+                </div>
+            </div>
+            <button class="text-xs font-mono text-secondary hover:text-primary font-bold">Düzenle</button>
+        </div>
+    </div>
+</section>
+<!-- ================= 08 / PHILOSOPHY (Philosophy.cs) ================= -->
+<section class="p-6 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col gap-6 shadow-xs scroll-mt-20" id="sec-philosophy">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+        <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-mono text-xs font-bold">08</span>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs uppercase tracking-wider text-secondary font-bold">FELSEFE &amp; METODOLOJİ</span>
+
+                </div>
+                <h3 class="font-sans text-lg font-bold text-primary">"Nasıl Çalışıyorum?" 3 Aşamalı Mühendislik İlkeleri</h3>
+            </div>
+        </div>
+        <button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-xs font-sans font-semibold flex items-center gap-1.5 transition-colors shadow-xs">
+            <span class="material-symbols-outlined text-sm">save</span> İlkeleri Kaydet
+        </button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Step 01 -->
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex flex-col gap-2">
+            <span class="font-mono text-xs font-bold text-secondary">01 / ANALİZ &amp; MODELLEME</span>
+            <input class="px-3 py-1.5 bg-surface-card border border-outline-variant/40 rounded text-xs font-sans font-bold text-primary" type="text" value="Analiz Et">
+            <textarea class="px-3 py-1.5 bg-surface-card border border-outline-variant/40 rounded text-xs font-body text-primary min-h-[60px]" rows="3">Problemi ve kullanıcı ihtiyacını doğru anlamaya odaklanırım. Gereksiz karmaşıklığı baştan ayıklayarak en sade mimariyi çizerim.</textarea>
+        </div>
+        <!-- Step 02 -->
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex flex-col gap-2">
+            <span class="font-mono text-xs font-bold text-secondary">02 / TASARIM &amp; İNŞA</span>
+            <input class="px-3 py-1.5 bg-surface-card border border-outline-variant/40 rounded text-xs font-sans font-bold text-primary" type="text" value="Tasarla &amp; Geliştir">
+            <textarea class="px-3 py-1.5 bg-surface-card border border-outline-variant/40 rounded text-xs font-body text-primary min-h-[60px]" rows="3">Temiz, modüler ve sürdürülebilir çözümler üretirim. Kodun bugün çalışması kadar yarın okunabilir olması da önemlidir.</textarea>
+        </div>
+        <!-- Step 03 -->
+        <div class="p-4 bg-surface-low rounded-xl border border-outline-variant/30 flex flex-col gap-2">
+            <span class="font-mono text-xs font-bold text-secondary">03 / TEST &amp; OPTİMİZASYON</span>
+            <input class="px-3 py-1.5 bg-surface-card border border-outline-variant/40 rounded text-xs font-sans font-bold text-primary" type="text" value="Test Et &amp; İyileştir">
+            <textarea class="px-3 py-1.5 bg-surface-card border border-outline-variant/40 rounded text-xs font-body text-primary min-h-[60px]" rows="3">Performans, kullanılabilirlik ve kod kalitesini sürekli geliştiririm. Geri bildirim döngüleriyle ürünü sürekli parlatırım.</textarea>
+        </div>
+    </div>
+</section>
+<!-- ================= 09 / CONTACT & SOCIAL MEDIA (Contact.cs) ================= -->
+<section class="p-6 bg-surface-card rounded-xl border border-outline-variant/30 flex flex-col gap-6 shadow-xs scroll-mt-20" id="sec-contact">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+        <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-mono text-xs font-bold">09</span>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs uppercase tracking-wider text-secondary font-bold">İLETİŞİM KANALLARI &amp; SOSYAL</span>
+
+                </div>
+                <h3 class="font-sans text-lg font-bold text-primary">E-posta, Sosyal Linkler ve İletişim Form Ayarları</h3>
+            </div>
+        </div>
+        <button class="px-3.5 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded-lg text-xs font-sans font-semibold flex items-center gap-1.5 transition-colors shadow-xs">
+            <span class="material-symbols-outlined text-sm">save</span> İletişim Ayarlarını Kaydet
+        </button>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="flex flex-col gap-1.5">
+            <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Birincil E-posta</label>
+            <input class="px-3 py-2 bg-surface-low border border-outline-variant/40 rounded-lg text-xs font-mono text-primary focus:outline-none focus:border-primary" type="email" value="mcivicioglu@domain.com">
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Konum / Şehir</label>
+            <input class="px-3 py-2 bg-surface-low border border-outline-variant/40 rounded-lg text-xs font-body text-primary focus:outline-none focus:border-primary" type="text" value="İzmir / Buca, Türkiye">
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">LinkedIn Profil URL</label>
+            <input class="px-3 py-2 bg-surface-low border border-outline-variant/40 rounded-lg text-xs font-mono text-primary focus:outline-none focus:border-primary" type="url" value="https://linkedin.com/in/mcivicioglu">
+        </div>
+        <div class="flex flex-col gap-1.5">
+            <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">GitHub Profil URL</label>
+            <input class="px-3 py-2 bg-surface-low border border-outline-variant/40 rounded-lg text-xs font-mono text-primary focus:outline-none focus:border-primary" type="url" value="https://github.com/mcivicioglu">
+        </div>
+    </div>
+</section>
+<!-- ================= 10 / INBOX & PROPOSALS (MESAJLAR GELEN KUTUSU) ================= -->
+<section class="p-6 bg-surface-card rounded-xl border-2 border-primary/20 flex flex-col gap-6 shadow-sm scroll-mt-20" id="sec-inbox">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-outline-variant/20">
+        <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-secondary text-on-primary flex items-center justify-center font-mono text-xs font-bold">10</span>
+            <div>
+                <div class="flex items-center gap-2">
+                    <span class="font-mono text-xs uppercase tracking-wider text-secondary font-bold">İLETİŞİM FORMU GELEN KUTUSU</span>
+                    <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-secondary-container text-on-surface font-bold">38 TOPLAM TALEP</span>
+                </div>
+                <h3 class="font-sans text-xl font-bold text-primary">Gelen İş Teklifleri, Danışmanlık ve Mesajlar</h3>
+            </div>
+        </div>
+        <div class="flex items-center gap-2">
+            <button class="px-3 py-1.5 bg-surface-low hover:bg-surface-dim rounded-lg text-xs font-mono text-on-surface flex items-center gap-1 transition-colors">
+                <span class="material-symbols-outlined text-sm">mark_email_read</span> Tümünü Okundu Say
+            </button>
+            <button class="px-3 py-1.5 bg-surface-low hover:bg-surface-dim rounded-lg text-xs font-mono text-on-surface flex items-center gap-1 transition-colors">
+                <span class="material-symbols-outlined text-sm">download</span> Dışa Aktar (.csv)
+            </button>
+        </div>
+    </div>
+    <!-- Filter Tabs: [ Tümü (38) ] [ Okunmamış (12) ] [ Okundu (16) ] [ Yanıtlandı (10) ] -->
+    <div class="flex items-center gap-2 overflow-x-auto pb-1 border-b border-outline-variant/20 text-xs font-sans">
+        <button class="px-3.5 py-1.5 rounded-lg bg-primary text-on-primary font-semibold flex items-center gap-1.5 shadow-xs shrink-0">
+            Tümü <span class="px-1.5 py-0.2 bg-white/20 rounded-full font-mono text-[10px]">38</span>
+        </button>
+        <button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-low font-medium flex items-center gap-1.5 transition-colors shrink-0">
+            Okunmamış <span class="px-1.5 py-0.2 bg-error-container text-error rounded-full font-mono text-[10px] font-bold">12</span>
+        </button>
+        <button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-low font-medium flex items-center gap-1.5 transition-colors shrink-0">
+            Okundu <span class="px-1.5 py-0.2 bg-surface-dim rounded-full font-mono text-[10px]">16</span>
+        </button>
+        <button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-low font-medium flex items-center gap-1.5 transition-colors shrink-0">
+            Yanıtlandı <span class="px-1.5 py-0.2 bg-emerald-100 text-emerald-800 rounded-full font-mono text-[10px] font-bold">10</span>
+        </button>
+        <button class="px-3.5 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-low font-medium flex items-center gap-1.5 transition-colors ml-auto shrink-0">
+            Arşiv
+        </button>
+    </div>
+    <!-- Inbox Grid: Table + Selected Message Detail -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <!-- Message List (7 Cols) -->
+        <div class="lg:col-span-7 flex flex-col gap-2.5">
+            <!-- Message Item 1 (Active / Okunmamış) -->
+            <div class="p-4 bg-surface-low rounded-xl border-2 border-primary flex flex-col gap-2 cursor-pointer shadow-xs">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-8 h-8 rounded-full bg-secondary text-on-primary flex items-center justify-center font-bold text-xs">AY</span>
+                        <div class="flex flex-col">
+                            <span class="font-sans font-bold text-xs text-primary">Ahmet Yılmaz</span>
+                            <span class="font-mono text-[11px] text-outline">ahmet@fintechsolutions.com</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-0.5 rounded bg-error-container text-error font-mono text-[10px] font-bold">Okunmamış</span>
+                        <span class="font-mono text-[11px] text-outline">2 saat önce</span>
+                    </div>
+                </div>
+                <div class="font-sans font-semibold text-xs text-primary mt-1">
+                    Kıdemli .NET Mimarı Danışmanlığı Talebi — 6 Aylık Sözleşme
+                </div>
+                <p class="font-body text-xs text-on-surface-variant line-clamp-2">
+                    "Merhaba Mahmut Bey, fintech platformumuzun monolitik mimariden Clean Architecture ve event-driven mikroservislere dönüştürülmesi projesinde teknik mimari danışmanlığı için sizinle görüşmek isteriz..."
+                </p>
+            </div>
+            <!-- Message Item 2 (Okundu) -->
+            <div class="p-4 bg-surface-low hover:bg-surface-dim rounded-xl border border-outline-variant/30 flex flex-col gap-2 cursor-pointer transition-colors">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-8 h-8 rounded-full bg-surface-card text-primary border border-outline-variant/30 flex items-center justify-center font-bold text-xs">ED</span>
+                        <div class="flex flex-col">
+                            <span class="font-sans font-semibold text-xs text-primary">Elif Demir</span>
+                            <span class="font-mono text-[11px] text-outline">elif.demir@techventures.io</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-0.5 rounded bg-surface-dim text-on-surface font-mono text-[10px] font-semibold">Okundu</span>
+                        <span class="font-mono text-[11px] text-outline">Dün, 16:40</span>
+                    </div>
+                </div>
+                <div class="font-sans font-semibold text-xs text-primary mt-1">
+                    Yüksek Erişilebilirlikli PostgreSQL &amp; Redis Önbellek Mimarisi
+                </div>
+                <p class="font-body text-xs text-on-surface-variant line-clamp-2">
+                    "Portfolyonuzdaki distributed cache ve veri tabanı optimizasyonu makalenizi inceledik. Mevcut altyapımızdaki darboğazları aşmak adına danışmanlık talep ediyoruz."
+                </p>
+            </div>
+            <!-- Message Item 3 (Yanıtlandı) -->
+            <div class="p-4 bg-surface-low hover:bg-surface-dim rounded-xl border border-outline-variant/30 flex flex-col gap-2 cursor-pointer transition-colors">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-8 h-8 rounded-full bg-surface-card text-primary border border-outline-variant/30 flex items-center justify-center font-bold text-xs">CÖ</span>
+                        <div class="flex flex-col">
+                            <span class="font-sans font-semibold text-xs text-primary">Caner Özkan</span>
+                            <span class="font-mono text-[11px] text-outline">caner@opensourceinitiative.org</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-mono text-[10px] font-semibold">Yanıtlandı</span>
+                        <span class="font-mono text-[11px] text-outline">3 gün önce</span>
+                    </div>
+                </div>
+                <div class="font-sans font-semibold text-xs text-primary mt-1">
+                    Açık Kaynak .NET Kütüphanesi Ortak Geliştirme Daveti
+                </div>
+                <p class="font-body text-xs text-on-surface-variant line-clamp-2">
+                    "GitHub profilinizdeki CQRS modüllerini çok beğendik. Topluluk odaklı yeni open-source projemizde maintainer olarak yer almak ister misiniz?"
+                </p>
+            </div>
+        </div>
+        <!-- Message Detail & Quick Reply (5 Cols) -->
+        <div class="lg:col-span-5 bg-surface-low p-5 rounded-xl border border-outline-variant/30 flex flex-col gap-4">
+            <div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm text-secondary">mark_chat_read</span>
+                    <span class="font-mono text-xs font-bold text-primary">Seçili Mesaj Detayı</span>
+                </div>
+                <span class="font-mono text-[11px] text-outline">#MSG-1084</span>
+            </div>
+            <div class="flex flex-col gap-1 text-xs">
+                <span class="font-mono text-[10px] uppercase text-outline font-semibold">Konu Başlığı</span>
+                <span class="font-sans font-bold text-sm text-primary">Kıdemli .NET Mimarı Danışmanlığı Talebi</span>
+            </div>
+            <div class="p-3 bg-surface-card rounded-lg border border-outline-variant/30 font-body text-xs text-primary leading-relaxed">
+                Sayın Mahmut Civicioğlu,<br><br>
+                Fintech Solutions ekibi olarak, ödeme altyapımızın mikroservislere ayrıştırılması sürecinde baş mimar olarak haftalık 20 saatlik teknik danışmanlık hizmeti almak istiyoruz. <br><br>
+                Uygun olduğunuz bir zaman diliminde online bir teknik değerlendirme toplantısı planlayabilir miyiz?
+            </div>
+            <!-- Quick Reply Box -->
+            <div class="flex flex-col gap-2 pt-2">
+                <label class="font-mono text-xs uppercase tracking-wider text-outline font-semibold">Hızlı Yanıt Gönder (SMTP)</label>
+                <textarea class="px-3 py-2 bg-surface-card border border-outline-variant/40 rounded-lg text-xs font-body text-primary focus:outline-none focus:border-primary min-h-[90px]" placeholder="Yanıtınızı buraya yazın..." rows="3">Merhaba Ahmet Bey, teklifiniz için teşekkür ederim. Projenin mimari detaylarını ve gereksinimlerini görüşmek üzere bu hafta Perşembe günü saat 14:00'te toplantı ayarlayabiliriz.</textarea>
+                <div class="flex items-center justify-between pt-1">
+                    <button class="px-3 py-1.5 bg-surface-card hover:bg-surface-dim border border-outline-variant/30 rounded text-xs font-mono text-on-surface">Taslak Kaydet</button>
+                    <button class="px-4 py-1.5 bg-primary text-on-primary hover:bg-primary-container rounded text-xs font-sans font-semibold flex items-center gap-1 shadow-xs">
+                        <span class="material-symbols-outlined text-xs">send</span> Yanıtı Gönder
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
